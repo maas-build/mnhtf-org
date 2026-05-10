@@ -1,0 +1,152 @@
+---
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '1x00000000000000000000AA';
+---
+<form class="contact-form" id="contact-form" novalidate>
+  <div class="form-group">
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" required autocomplete="name" />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" required autocomplete="email" />
+  </div>
+
+  <div class="form-group">
+    <label for="intent">I Want To&hellip;</label>
+    <select id="intent" name="intent">
+      <option value="">&mdash; Select One &mdash;</option>
+      <option>FIND SUPPORT for Myself</option>
+      <option>Learn How to Support my Friend/Family Member</option>
+      <option>Find Resources for Property Manager</option>
+      <option>Be Added to the Resource List</option>
+      <option>Renew or Become a MEMBER</option>
+      <option>Join a MNHTF Business/Education MEETING</option>
+      <option>Request a MNHTF Speaker for an Event</option>
+      <option>Tell Us About YOUR EVENT</option>
+      <option>Make a MEDIA/PRESS Inquiry</option>
+      <option>SUBSCRIBE to the Email List</option>
+      <option>UNSUBSCRIBE from the Email List</option>
+      <option>Ask a question</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </div>
+
+  <div class="cf-turnstile" data-sitekey={siteKey}></div>
+
+  <div id="form-status" role="alert" aria-live="polite"></div>
+
+  <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+</form>
+
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script>
+const form = document.getElementById('contact-form') as HTMLFormElement;
+const statusEl = document.getElementById('form-status') as HTMLElement;
+
+form?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+  const tokenInput = document.querySelector('[name="cf-turnstile-response"]') as HTMLInputElement | null;
+  const token = tokenInput?.value ?? '';
+
+  statusEl.textContent = 'Sending\u2026';
+  statusEl.className = '';
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: data.get('name'),
+        email: data.get('email'),
+        intent: data.get('intent'),
+        message: data.get('message'),
+        'cf-turnstile-response': token,
+      }),
+    });
+
+    const json = await res.json() as { ok: boolean; error?: string };
+
+    if (json.ok) {
+      statusEl.textContent = 'Thank you! Your message has been sent. We will get back to you soon.';
+      statusEl.className = 'success';
+      form.reset();
+    } else {
+      statusEl.textContent = json.error ?? 'Failed to send message. Please try again or email info@mnhtf.org.';
+      statusEl.className = 'error';
+    }
+  } catch {
+    statusEl.textContent = 'An error occurred. Please email info@mnhtf.org directly.';
+    statusEl.className = 'error';
+  }
+});
+</script>
+
+<style>
+.contact-form {
+  max-width: 640px;
+}
+
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--space-1);
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background: var(--color-white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+#form-status {
+  margin-bottom: var(--space-4);
+}
+
+#form-status.success {
+  color: #1b5e20;
+  padding: var(--space-3);
+  background: #e8f5e9;
+  border-radius: 4px;
+}
+
+#form-status.error {
+  color: #b71c1c;
+  padding: var(--space-3);
+  background: #ffebee;
+  border-radius: 4px;
+}
+
+.cf-turnstile {
+  margin-bottom: var(--space-4);
+}
+
+.submit-btn {
+  cursor: pointer;
+}
+</style>

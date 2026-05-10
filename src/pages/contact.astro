@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+<BaseLayout title="Contact Us" description="Contact the Minnesota Hoarding Task Force with questions, requests for support, or to get involved.">
+
+  <div class="page-content">
+    <div class="container">
+      <h1>Contact Us</h1>
+
+      <div class="contact-layout">
+        <div class="contact-form-section">
+          <h2>Send Us a Message</h2>
+
+          <div class="faq-section">
+            <h3>Frequently Asked Questions (FAQ)</h3>
+            <ul>
+              <li>How to help a friend or loved one? Where do I begin?</li>
+              <li>Who can I contact if I am concerned about a Neighbor?</li>
+              <li>Is there any direct service help at a low or no Cost?</li>
+              <li>Are there Support Groups?</li>
+              <li>I have questions about Animal Hoarding?</li>
+              <li>I have questions about Hoarding and losing my housing?</li>
+            </ul>
+          </div>
+
+          <ContactForm />
+        </div>
+
+        <aside class="contact-info">
+          <h2>Connect with the Task Force</h2>
+          <dl>
+            <dt>Voicemail</dt>
+            <dd><a href="tel:6125685550">612-568-5550</a></dd>
+            <dt>Email</dt>
+            <dd><a href="mailto:info@mnhtf.org">info@mnhtf.org</a></dd>
+            <dt>Facebook</dt>
+            <dd><a href="https://www.facebook.com/mnhtf" target="_blank" rel="noopener noreferrer">facebook.com/mnhtf</a></dd>
+            <dt>Mailing Address</dt>
+            <dd>P.O. Box 21483<br />Eagan, MN 55121</dd>
+          </dl>
+
+          <h2>Task Force Executive Board</h2>
+          <ul class="board-list">
+            <li>President &ndash; Jennifer LeClaire Schmidt</li>
+            <li>Vice President Emeritus &ndash; Jacqui Mason</li>
+            <li>Treasurer &ndash; Gail Trenholm</li>
+            <li>Secretary &ndash; Annika Ewing</li>
+            <li>Communications Liaison &ndash; Louise Kurzeka</li>
+            <li>President Emeritus &ndash; Emily Cheesebrow</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-12);
+  align-items: start;
+}
+.faq-section {
+  background: var(--color-bg-light);
+  border-radius: 8px;
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-6);
+}
+.faq-section h3 {
+  margin-bottom: var(--space-2);
+}
+.contact-info {
+  background: var(--color-bg-light);
+  border-radius: 8px;
+  padding: var(--space-6);
+}
+.contact-info dl {
+  margin: 0 0 var(--space-6);
+}
+.contact-info dt {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: var(--space-3);
+}
+.contact-info dd {
+  margin: 0;
+}
+.board-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.board-list li {
+  padding: var(--space-1) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.board-list li:last-child {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

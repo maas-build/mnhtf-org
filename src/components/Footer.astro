@@ -1,0 +1,136 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo-link">
+        <img src="/images/MN-HTF-Logo.png" alt="Minnesota Hoarding Task Force" width="150" height="70" />
+      </a>
+      <p class="footer-tagline">Minnesota Hoarding Task Force</p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-hoarding/">About Hoarding</a></li>
+          <li><a href="/events-and-calendar/">Events</a></li>
+          <li><a href="/education/">Education</a></li>
+          <li><a href="/directory/">Resources</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Get Involved</h3>
+        <ul>
+          <li><a href="/ways-to-give/">Ways to Give</a></li>
+          <li><a href="/membership/">Membership</a></li>
+          <li><a href="https://givebutter.com/mnhtfgeneraldonation" target="_blank" rel="noopener">Donate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://www.facebook.com/mnhtf" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.youtube.com/@mnhoardingtaskforce1757" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>
+        Disclaimer: The Minnesota Hoarding Task Force (&ldquo;MNHTF&rdquo;) does not provide services directly. MNHTF provides resources and information regarding the general subject of hoarding. In doing so, MNHTF does not endorse, recommend, warrant or assume any legal liability for the accuracy, completeness, or usefulness of any information, apparatus, product, or process.
+      </p>
+      <p>&copy; {year} Minnesota Hoarding Task Force. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  margin-top: var(--space-16);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4);
+  display: flex;
+  gap: var(--space-12);
+  flex-wrap: wrap;
+}
+
+.footer-logo-link img {
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+  display: block;
+}
+
+.footer-tagline {
+  font-size: var(--font-size-sm);
+  opacity: 0.7;
+  margin-top: var(--space-2);
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--space-12);
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.footer-col h3 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+  color: var(--color-accent);
+}
+
+.footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col li {
+  margin-bottom: var(--space-2);
+}
+
+.footer-col a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+}
+
+.footer-col a:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+}
+
+.footer-bottom .container {
+  max-width: var(--max-width);
+}
+
+.footer-bottom p {
+  margin: 0 0 var(--space-2);
+  font-size: var(--font-size-sm);
+  opacity: 0.7;
+}
+
+.footer-bottom p:last-child {
+  margin-bottom: 0;
+}
+</style>

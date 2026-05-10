@@ -1,0 +1,13 @@
+# WordPress permalink redirects → new Astro routes
+/about-hoarding /about-hoarding/ 301
+/events-and-calendar /events-and-calendar/ 301
+/education /education/ 301
+/directory /directory/ 301
+/for-people-who-hoard /for-people-who-hoard/ 301
+/for-friends-and-family /for-friends-and-family/ 301
+/for-municipalities /for-municipalities/ 301
+/for-property-managers /for-property-managers/ 301
+/coming-soon /coming-soon/ 301
+/contact /contact/ 301
+/ways-to-give /ways-to-give/ 301
+/membership /membership/ 301

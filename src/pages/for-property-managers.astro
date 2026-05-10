@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResourceList from '../components/ResourceList.astro';
+
+const resources = [
+  {
+    name: "Mutual Support for HD",
+    url: "https://www.mutualsupportforhd.com/",
+    description: "A platform that offers virtual support groups and resources for individuals dealing with various mental health challenges, including hoarding disorder (HD). The website provides access to online communities where people can connect in a safe and supportive environment, share experiences, and find encouragement."
+  },
+  {
+    name: "Center for Hoarding and Cluttering",
+    url: "https://www.centerforhoarding.org/",
+    description: "An organization dedicated to supporting individuals impacted by hoarding disorder. It offers resources, education, and advocacy to address the challenges associated with hoarding behaviors. CHC provides services such as support groups, training, and consultations for individuals, families, and professionals."
+  },
+  {
+    name: "Institute for Challenging Disorganization",
+    url: "https://www.challengingdisorganization.org/",
+    description: "A nonprofit organization dedicated to education, research, and strategies for addressing chronic disorganization, including hoarding disorder. It offers resources for individuals, families, and professionals, including training programs, publications, and a robust support network."
+  },
+  {
+    name: "International OCD Foundation",
+    url: "https://hoarding.iocdf.org/",
+    description: "Offers a dedicated resource center focused on hoarding disorder. This platform provides comprehensive information about the condition, including diagnostic criteria, treatment options, and support resources for individuals, families, and professionals."
+  },
+  {
+    name: "Wellington-Guelph Hoarding Response",
+    url: "https://www.wghoardingresponse.com/",
+    description: "Offers comprehensive resources and support for individuals dealing with hoarding behaviors, their families, and service providers. It emphasizes harm reduction, safety, and person-centered care. WGHR provides tools like risk assessment scales, educational workshops, and e-learning modules."
+  },
+  {
+    name: "Center for Hoarding and Cluttering – Uniform Inspection Checklist",
+    url: "https://www.centerforhoarding.org/uniform-inspection-checklist/",
+    description: "The Center for Hoarding and Cluttering offers a comprehensive inspection tool called the Uniform Inspection Checklist (UIC), designed to assess and track safety and sanitation in environments affected by hoarding. Property managers can use this tool to work with residents."
+  }
+];
+---
+<BaseLayout title="For Property Managers" description="Tools and guidance for property managers dealing with hoarding situations in rental housing.">
+
+  <div class="page-content">
+    <div class="container">
+      <h1>For Property Managers</h1>
+
+      <p>In property management we aim to keep all our residents safe and living in healthy and cared for homes. Every owner or manager may have their own maintenance and housekeeping standards for housing inspections. Other agencies such as cities, counties, HUD or USDA have code standards that they inspect for and issue correction orders on. Multiple priorities/standards can make it a challenge when we find that a resident is struggling with clutter and hoarding.</p>
+
+      <p>When a clutter and hoarding condition is discovered, it is best practice to involve the resident and their current support system to work together on getting their home to a place where an inspection can be passed. If you are speaking with those who are supporting a resident, it is important to obtain permission to do so.</p>
+
+      <h2>Initial Focus Areas</h2>
+      <p>It is suggested to focus initially on health and safety issues which can include:</p>
+      <ul>
+        <li>Access to egress from the home in case of emergency</li>
+        <li>Access for emergency personnel to enter if there is an emergency</li>
+        <li>Ability to use water for cleaning, flushing, bathing etc.</li>
+        <li>Working smoke and carbon monoxide detectors</li>
+        <li>Determine which maintenance repairs need to be corrected immediately</li>
+        <li>Determine which environmental hazards must be corrected immediately</li>
+      </ul>
+
+      <h2>Next Steps</h2>
+      <p>Next, move to an approach that sets areas of focus and timelines:</p>
+      <ul>
+        <li>Offer objective instructions. Required action must be communicated clearly with specific language.</li>
+        <li>Use tools such as the Uniform Inspection Checklist (can be found below)</li>
+        <li>Talk with the resident and their supports about specific areas of focus and timelines.</li>
+      </ul>
+
+      <p>There are tools below that can be helpful in working with residents to achieve the standards to pass inspections.</p>
+
+      <ResourceList resources={resources} />
+    </div>
+  </div>
+
+</BaseLayout>

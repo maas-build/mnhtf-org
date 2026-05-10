@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResourceList from '../components/ResourceList.astro';
+
+const resources = [
+  {
+    name: "Mutual Support for HD",
+    url: "https://www.mutualsupportforhd.com/",
+    description: "A platform that offers virtual support groups and resources for individuals dealing with various mental health challenges, including hoarding disorder (HD). The website provides access to online communities where people can connect in a safe and supportive environment, share experiences, and find encouragement."
+  },
+  {
+    name: "Center for Hoarding and Cluttering",
+    url: "https://www.centerforhoarding.org/",
+    description: "An organization dedicated to supporting individuals impacted by hoarding disorder. It offers resources, education, and advocacy to address the challenges associated with hoarding behaviors. CHC provides services such as support groups, training, and consultations for individuals, families, and professionals."
+  },
+  {
+    name: "Institute for Challenging Disorganization",
+    url: "https://www.challengingdisorganization.org/",
+    description: "A nonprofit organization dedicated to education, research, and strategies for addressing chronic disorganization, including hoarding disorder. It offers resources for individuals, families, and professionals, including training programs, publications, and a robust support network."
+  },
+  {
+    name: "International OCD Foundation",
+    url: "https://hoarding.iocdf.org/",
+    description: "Offers a dedicated resource center focused on hoarding disorder. This platform provides comprehensive information about the condition, including diagnostic criteria, treatment options, and support resources for individuals, families, and professionals."
+  },
+  {
+    name: "Wellington-Guelph Hoarding Response",
+    url: "https://www.wghoardingresponse.com/",
+    description: "Offers comprehensive resources and support for individuals dealing with hoarding behaviors, their families, and service providers. It emphasizes harm reduction, safety, and person-centered care. WGHR provides tools like risk assessment scales, educational workshops, and e-learning modules."
+  },
+  {
+    name: "Center for Hoarding and Cluttering – Uniform Inspection Checklist",
+    url: "https://www.centerforhoarding.org/uniform-inspection-checklist/",
+    description: "The Center for Hoarding and Cluttering offers a comprehensive inspection tool called the Uniform Inspection Checklist (UIC), designed to assess and track safety and sanitation in environments affected by hoarding."
+  }
+];
+---
+<BaseLayout title="For People Who Hoard" description="Are you struggling with hoarding disorder? Find resources and support available to you.">
+
+  <div class="page-content">
+    <div class="container">
+      <h1>For People Who Hoard</h1>
+
+      <div class="intro-questions">
+        <ul>
+          <li>Are the number of items in your home causing distress or difficulty using the rooms in your home?</li>
+          <li>Do they pose a health and safety concern for those living in or near your home?</li>
+          <li>Are you overwhelmed by decisions on what to keep or let go?</li>
+        </ul>
+        <p>There are many resources available to assist with understanding hoarding disorder and help is available.</p>
+      </div>
+
+      <ResourceList resources={resources} />
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+.intro-questions {
+  background: var(--color-bg-light);
+  border-radius: 8px;
+  padding: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+.intro-questions ul {
+  margin-bottom: var(--space-4);
+}
+</style>

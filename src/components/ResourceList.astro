@@ -1,0 +1,43 @@
+---
+interface Resource {
+  name: string;
+  description: string;
+  url: string;
+}
+
+interface Props {
+  resources: Resource[];
+}
+
+const { resources } = Astro.props;
+---
+<div class="resource-list">
+  {resources.map(r => (
+    <div class="resource-card">
+      <h3><a href={r.url} target="_blank" rel="noopener noreferrer">{r.name}</a></h3>
+      <p>{r.description}</p>
+    </div>
+  ))}
+</div>
+
+<style>
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin: var(--space-6) 0;
+}
+.resource-card {
+  background: var(--color-bg-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 8px 8px 0;
+  padding: var(--space-6);
+}
+.resource-card h3 {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-lg);
+}
+.resource-card p {
+  margin: 0;
+}
+</style>

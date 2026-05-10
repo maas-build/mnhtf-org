@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResourceList from '../components/ResourceList.astro';
+
+const resources = [
+  {
+    name: "Mutual Support for HD",
+    url: "https://www.mutualsupportforhd.com/",
+    description: "A platform that offers virtual support groups and resources for individuals dealing with various mental health challenges, including hoarding disorder (HD). The website provides access to online communities where people can connect in a safe and supportive environment, share experiences, and find encouragement."
+  },
+  {
+    name: "Center for Hoarding and Cluttering",
+    url: "https://www.centerforhoarding.org/",
+    description: "An organization dedicated to supporting individuals impacted by hoarding disorder. It offers resources, education, and advocacy to address the challenges associated with hoarding behaviors. CHC provides services such as support groups, training, and consultations for individuals, families, and professionals."
+  },
+  {
+    name: "Institute for Challenging Disorganization",
+    url: "https://www.challengingdisorganization.org/",
+    description: "A nonprofit organization dedicated to education, research, and strategies for addressing chronic disorganization, including hoarding disorder. It offers resources for individuals, families, and professionals, including training programs, publications, and a robust support network."
+  },
+  {
+    name: "International OCD Foundation",
+    url: "https://hoarding.iocdf.org/",
+    description: "Offers a dedicated resource center focused on hoarding disorder. This platform provides comprehensive information about the condition, including diagnostic criteria, treatment options, and support resources for individuals, families, and professionals."
+  },
+  {
+    name: "Wellington-Guelph Hoarding Response",
+    url: "https://www.wghoardingresponse.com/",
+    description: "Offers comprehensive resources and support for individuals dealing with hoarding behaviors, their families, and service providers. It emphasizes harm reduction, safety, and person-centered care. WGHR provides tools like risk assessment scales, educational workshops, and e-learning modules."
+  }
+];
+---
+<BaseLayout title="For Municipalities" description="Resources for local government and code enforcement dealing with hoarding situations.">
+
+  <div class="page-content">
+    <div class="container">
+      <h1>For Municipalities</h1>
+
+      <p>Severe clutter threatens the health and safety of those living in or near the home, causing health problems, structural damage, fire, and even death. It is not only a danger to those living in and around the home, but the clutter can also be a hazard to firefighters and other first responders.</p>
+
+      <p>Because of these dangers, enforcement of fire and housing codes can be used to help mitigate and abate the problem. Each municipality treats the problem differently, either using fire, property maintenance or health codes. Involving a local government may give individuals access to assistance or resources.</p>
+
+      <ResourceList resources={resources} />
+    </div>
+  </div>
+
+</BaseLayout>

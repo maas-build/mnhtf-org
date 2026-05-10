@@ -1,17 +1,136 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
+<BaseLayout title="Home" description="Our mission is to support any person, family, friend or agency in Minnesota affected by hoarding through education, networking and resources.">
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+  <section class="hero">
+    <div class="container">
+      <img
+        src="/images/2026-Membership-Drive-1.png"
+        alt="2026 Membership Drive — Join the Minnesota Hoarding Task Force"
+        class="hero-img"
+        width="1140"
+        height="500"
+      />
+    </div>
+  </section>
+
+  <section class="intro section">
+    <div class="container">
+      <p>We are an all volunteer group of individuals and professionals who work in various fields or have a personal interest in hoarding. The Minnesota Hoarding Task Force educates the public and families about what hoarding is and is not. We respond to requests for help with hoarding situations and participate in community events with information for those affected by or who want to learn more about hoarding.</p>
+      <p>We do not offer services, instead we use our expertise and connections to share information and options to be considered. <a href="/directory/">View our Resource Directory below.</a></p>
+      <p>If you have a question about a hoarding situation, <a href="/contact/">contact us</a> by phone, email, or on our <a href="https://www.facebook.com/mnhtf" target="_blank" rel="noopener noreferrer">Facebook Page</a>. We always keep details of such situations confidential.</p>
+    </div>
+  </section>
+
+  <section class="mission section bg-light">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>Our mission is to support any person, family, friend or agency in Minnesota affected by hoarding through education, networking and connection to resources while promoting public health and safety.</p>
+      <p>We welcome opportunities throughout Minnesota to share information about hoarding behaviors and hoarding disorder. As a mental illness, hoarding has been misunderstood and stigmatized for far too long.</p>
+      <p>We welcome others to join us at our Monthly Education and Business Meetings, where we network, learn from each other, and move forward on our mission to support all in Minnesota who are affected by hoarding. Meetings are held at rotating locations in the Metro area, and are open to the public. To attend in person or virtually, you can request an invitation by emailing us at <a href="mailto:info@mnhtf.org">info@mnhtf.org</a>.</p>
+    </div>
+  </section>
+
+  <section class="directory-cta section">
+    <div class="container">
+      <h2>Resource Directory</h2>
+      <p>We are building an extensive Resource Directory in order to share lists of existing community services. We are working to include more categories and more situations for which help already exists.</p>
+      <div class="cta-grid">
+        <a href="/for-people-who-hoard/" class="cta-card">
+          <h3>I am struggling with Hoarding Disorder&hellip;</h3>
+          <p>Find resources and support for individuals living with hoarding disorder.</p>
+        </a>
+        <a href="/for-friends-and-family/" class="cta-card">
+          <h3>I am a friend or family member&hellip;</h3>
+          <p>Learn how to support a loved one affected by hoarding.</p>
+        </a>
+        <a href="/for-municipalities/" class="cta-card">
+          <h3>I am a Municipality&hellip;</h3>
+          <p>Resources for local government and code enforcement.</p>
+        </a>
+        <a href="/for-property-managers/" class="cta-card">
+          <h3>I am a Property Manager&hellip;</h3>
+          <p>Tools and guidance for property managers dealing with hoarding situations.</p>
+        </a>
+      </div>
+      <p class="cta-center"><a href="/directory/" class="btn btn-primary">View Full Directory</a></p>
+    </div>
+  </section>
+
+  <section class="email-signup section bg-light">
+    <div class="container email-signup-inner">
+      <h2>Join the Email List</h2>
+      <p>News, Invites to our Public Education &amp; Business Meetings and More, right to your Inbox!</p>
+      <iframe
+        src="https://buttondown.com/mnhtf/embed"
+        title="Subscribe to MNHTF email list"
+        width="100%"
+        height="160"
+        style="border:none;"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+  <section class="vision section">
+    <div class="container">
+      <h2>Our Vision</h2>
+      <p>We envision communities that implement best practices to support those affected by hoarding where individuals are supported with sustainable options while being treated with dignity and respect.</p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.hero {
+  background: var(--color-bg-light);
+  padding: var(--space-8) 0;
+}
+.hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-6) 0;
+}
+.cta-card {
+  display: block;
+  background: var(--color-white);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--space-6);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.cta-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(4, 12, 222, 0.1);
+  color: var(--color-text);
+}
+.cta-card h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-2);
+  color: var(--color-primary);
+}
+.cta-card p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+.cta-center {
+  text-align: center;
+  margin-top: var(--space-6);
+}
+.email-signup-inner {
+  max-width: 600px;
+}
+</style>

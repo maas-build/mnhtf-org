@@ -1,0 +1,292 @@
+---
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About Hoarding', href: '/about-hoarding/' },
+  { label: 'Events', href: '/events-and-calendar/' },
+  { label: 'Education', href: '/education/' },
+  {
+    label: 'Resources',
+    href: '/directory/',
+    children: [
+      { label: 'I am struggling with Hoarding Disorder\u2026', href: '/for-people-who-hoard/' },
+      { label: 'I am a friend or family member of someone\u2026', href: '/for-friends-and-family/' },
+      { label: 'I am a Municipality\u2026', href: '/for-municipalities/' },
+      { label: 'I am a Property Manager\u2026', href: '/for-property-managers/' },
+      { label: 'I am a Mental Health Professional\u2026', href: '/coming-soon/' },
+    ]
+  },
+  {
+    label: 'Membership & Contact',
+    href: '/contact/',
+    children: [
+      { label: 'Ways to Give', href: '/ways-to-give/' },
+      { label: 'Membership', href: '/membership/' },
+    ]
+  },
+];
+const currentPath = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo-link" aria-label="Minnesota Hoarding Task Force Home">
+      <img src="/images/MN-HTF-Logo.png" alt="Minnesota Hoarding Task Force logo" width="184" height="85" />
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        {navItems.map(item => (
+          <li class={`nav-item${item.children ? ' has-dropdown' : ''}`}>
+            <a
+              href={item.href}
+              class={`nav-link${currentPath === item.href || (currentPath.startsWith(item.href) && item.href !== '/') ? ' active' : ''}`}
+            >
+              {item.label}
+              {item.children && <span class="dropdown-arrow" aria-hidden="true">&#9660;</span>}
+            </a>
+            {item.children && (
+              <ul class="dropdown-menu">
+                {item.children.map(child => (
+                  <li><a href={child.href} class="dropdown-link">{child.label}</a></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://givebutter.com/mnhtfgeneraldonation" target="_blank" rel="noopener noreferrer" class="btn-donate">
+        Donate
+      </a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      {navItems.map(item => (
+        <li>
+          <a href={item.href} class="mobile-nav-link">{item.label}</a>
+          {item.children && (
+            <ul class="mobile-sub-list">
+              {item.children.map(child => (
+                <li><a href={child.href} class="mobile-sub-link">{child.label}</a></li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<style>
+.site-header {
+  background-color: var(--color-header-bg);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.15);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 80px;
+}
+
+.logo-link img {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+
+.main-nav {
+  flex: 1;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-3) var(--space-3);
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-primary);
+}
+
+.dropdown-arrow {
+  font-size: 8px;
+}
+
+.dropdown-menu {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-2) 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-white);
+  min-width: 280px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--color-secondary);
+  border-radius: 1%;
+  display: none;
+  z-index: 100;
+}
+
+.nav-item.has-dropdown:hover .dropdown-menu,
+.nav-item.has-dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-link {
+  display: block;
+  padding: var(--space-2) var(--space-4);
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color var(--transition), color var(--transition);
+  border-bottom: 2px solid var(--color-secondary);
+}
+
+.dropdown-link:last-of-type {
+  border-bottom: none;
+}
+
+.dropdown-link:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-left: auto;
+}
+
+.btn-donate {
+  background-color: var(--color-donate);
+  color: var(--color-white);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  white-space: nowrap;
+  transition: background-color var(--transition);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-donate:hover {
+  background-color: var(--color-donate-hover);
+  color: var(--color-white);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-secondary);
+}
+
+.mobile-nav {
+  display: none;
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border);
+}
+
+.mobile-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-2) 0;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobile-sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+}
+
+.mobile-sub-link {
+  display: block;
+  padding: var(--space-2) var(--space-8);
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (max-width: 900px) {
+  .main-nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .mobile-nav.open {
+    display: block;
+  }
+}
+</style>
+
+<script>
+const hamburger = document.querySelector('.hamburger') as HTMLButtonElement;
+const mobileNav = document.querySelector('.mobile-nav') as HTMLElement;
+
+hamburger?.addEventListener('click', () => {
+  const isOpen = mobileNav.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  mobileNav.setAttribute('aria-hidden', String(!isOpen));
+});
+</script>

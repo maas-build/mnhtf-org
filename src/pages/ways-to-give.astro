@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Ways to Give" description="When you give to the Minnesota Hoarding Task Force, you're helping bring awareness, education, and support to individuals and families living with hoarding behavior.">
+
+  <div class="page-content">
+    <div class="container">
+      <h1>Ways to Give</h1>
+      <p>When you give to the Minnesota Hoarding Task Force, you're helping bring awareness, education, and support to individuals and families living with hoarding behavior.</p>
+
+      <div class="giving-grid">
+        <div class="giving-card">
+          <h2>Online Donations</h2>
+          <p>Online Donations are fast, easy, and convenient.</p>
+          <a href="https://givebutter.com/mnhtfgeneraldonation" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Give Now</a>
+        </div>
+
+        <div class="giving-card">
+          <h2>Mail-In Donations</h2>
+          <p>If you prefer to mail-in a donation, you can do so at the address below:</p>
+          <address>
+            Minnesota Hoarding Task Force<br />
+            P.O. Box 21483<br />
+            Eagan, MN 55121
+          </address>
+        </div>
+
+        <div class="giving-card">
+          <h2>Events and Sponsors</h2>
+          <p>For upcoming events and sponsorship opportunities, contact <a href="mailto:info@mnhtf.org">info@mnhtf.org</a>.</p>
+        </div>
+
+        <div class="giving-card">
+          <h2>Match Gifts</h2>
+          <p>Help us double our impact through Corporate Giving. Check with your Employer or Human Resources Department for more information on gift matching.</p>
+        </div>
+
+        <div class="giving-card">
+          <h2>In-Kind Gifts</h2>
+          <p>By volunteering your time and talent, you help us make an impact in the community, and your contributions are invaluable.</p>
+        </div>
+      </div>
+
+      <section class="donation-faq">
+        <h2>Donation FAQs</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Local Donations</h3>
+            <p>When you donate to the Minnesota Hoarding Task Force, your donation maximizes impact in bringing awareness, education, and resources to those with hoarding behavior and vulnerable individuals.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Tax-Deductible</h3>
+            <p>Your donation is Tax-Deductible, as the Minnesota Hoarding Task Force is a 501(c)(3) organization. (EIN 81-3567154) This means that your donation is Tax-Deductible as allowed by law.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Personal Information</h3>
+            <p>We respect your privacy and do not sell your email address to others. We will use it to keep you informed of MNHTF events, meetings, and information. For additional information or questions, please <a href="mailto:info@mnhtf.org">contact us</a>.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+.giving-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-8) 0;
+}
+.giving-card {
+  background: var(--color-bg-light);
+  border-radius: 8px;
+  padding: var(--space-6);
+}
+.giving-card h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-3);
+}
+address {
+  font-style: normal;
+  line-height: 1.8;
+}
+.donation-faq {
+  margin-top: var(--space-12);
+}
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+.faq-item {
+  background: var(--color-bg-light);
+  border-radius: 8px;
+  padding: var(--space-6);
+}
+</style>
