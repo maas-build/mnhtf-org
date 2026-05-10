@@ -1,47 +1,139 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ResourceList from '../components/ResourceList.astro';
-
-const resources = [
-  {
-    name: "Mutual Support for HD",
-    url: "https://www.mutualsupportforhd.com/",
-    description: "A platform that offers virtual support groups and resources for individuals dealing with various mental health challenges, including hoarding disorder (HD). The website provides access to online communities where people can connect in a safe and supportive environment, share experiences, and find encouragement."
-  },
-  {
-    name: "Center for Hoarding and Cluttering",
-    url: "https://www.centerforhoarding.org/",
-    description: "An organization dedicated to supporting individuals impacted by hoarding disorder. It offers resources, education, and advocacy to address the challenges associated with hoarding behaviors. CHC provides services such as support groups, training, and consultations for individuals, families, and professionals."
-  },
-  {
-    name: "Institute for Challenging Disorganization",
-    url: "https://www.challengingdisorganization.org/",
-    description: "A nonprofit organization dedicated to education, research, and strategies for addressing chronic disorganization, including hoarding disorder. It offers resources for individuals, families, and professionals, including training programs, publications, and a robust support network."
-  },
-  {
-    name: "International OCD Foundation",
-    url: "https://hoarding.iocdf.org/",
-    description: "Offers a dedicated resource center focused on hoarding disorder. This platform provides comprehensive information about the condition, including diagnostic criteria, treatment options, and support resources for individuals, families, and professionals."
-  },
-  {
-    name: "Wellington-Guelph Hoarding Response",
-    url: "https://www.wghoardingresponse.com/",
-    description: "Offers comprehensive resources and support for individuals dealing with hoarding behaviors, their families, and service providers. It emphasizes harm reduction, safety, and person-centered care. WGHR provides tools like risk assessment scales, educational workshops, and e-learning modules."
-  }
-];
 ---
 <BaseLayout title="For Municipalities" description="Resources for local government and code enforcement dealing with hoarding situations.">
 
   <div class="page-content">
     <div class="container">
-      <h1>For Municipalities</h1>
 
-      <p>Severe clutter threatens the health and safety of those living in or near the home, causing health problems, structural damage, fire, and even death. It is not only a danger to those living in and around the home, but the clutter can also be a hazard to firefighters and other first responders.</p>
+      <img src="/images/Municipality.png" alt="For Municipalities" class="banner-img" />
 
-      <p>Because of these dangers, enforcement of fire and housing codes can be used to help mitigate and abate the problem. Each municipality treats the problem differently, either using fire, property maintenance or health codes. Involving a local government may give individuals access to assistance or resources.</p>
+      <p>Severe clutter threatens the health and safety of those living in or near the home, causing health problems, structural damage, fire, and even death. It is not only a danger to those living in and around the home, but the clutter can also be a hazard to firefighters and other first responders. Because of these dangers, enforcement of fire and housing codes can be used to help mitigate and abate the problem.</p>
 
-      <ResourceList resources={resources} />
+      <p>Each municipality treats the problem differently, either using fire, property maintenance or health codes. Involving a local government may give individuals access to assistance or resources.</p>
+
+      <section class="resource-section">
+        <div class="resource-card">
+          <h3><a href="https://www.mutualsupportforhd.com/" target="_blank" rel="noopener noreferrer">Mutual Support for HD</a></h3>
+          <p>A platform that offers virtual support groups and resources for individuals dealing with various mental health challenges, including hoarding disorder (HD). The website provides access to online communities where people can connect in a safe and supportive environment, share experiences, and find encouragement. Its virtual groups often focus on specific topics, helping members work together to address challenges and improve their mental health.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://www.centerforhoarding.org/" target="_blank" rel="noopener noreferrer">Center for Hoarding and Cluttering</a></h3>
+          <p>An organization dedicated to supporting individuals impacted by hoarding disorder. It offers resources, education, and advocacy to address the challenges associated with hoarding behaviors. CHC provides services such as support groups, training, and consultations for individuals, families, and professionals, aiming to foster understanding and promote effective strategies for managing hoarding and improving overall well-being.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://www.challengingdisorganization.org/" target="_blank" rel="noopener noreferrer">Institute for Challenging Disorganization</a></h3>
+          <p>A nonprofit organization dedicated to education, research, and strategies for addressing chronic disorganization, including hoarding disorder. It offers resources for individuals, families, and professionals, including training programs, publications, and a robust support network. The ICD aims to empower people to create sustainable organizational solutions and improve their quality of life while raising awareness about the challenges of disorganization and its related conditions.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://hoarding.iocdf.org/" target="_blank" rel="noopener noreferrer">International OCD Foundation</a></h3>
+          <p>Offers a dedicated resource center focused on hoarding disorder. This platform provides comprehensive information about the condition, including diagnostic criteria, treatment options, and support resources for individuals, families, and professionals. It aims to raise awareness and understanding of hoarding disorder, promoting effective interventions and support strategies.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://www.wghoardingresponse.com/" target="_blank" rel="noopener noreferrer">Wellington-Guelph Hoarding Response</a></h3>
+          <p>Offers comprehensive resources and support for individuals dealing with hoarding behaviors, their families, and service providers. It emphasizes harm reduction, safety, and person-centered care. WGHR provides tools like risk assessment scales, educational workshops, and e-learning modules tailored to address hoarding challenges. Their services include free community presentations, annual workshops with expert speakers, and collaboration with local agencies to create multidisciplinary support teams.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://mn.gov/dhs/people-we-serve/adults/services/adult-protection/" target="_blank" rel="noopener noreferrer">Minnesota Department of Human Services (DHS) Adult Protection Services</a></h3>
+          <p>Provides resources and support to safeguard vulnerable adults from abuse, neglect, and exploitation. Through education, reporting systems, and intervention services, it works to ensure the safety and well-being of at-risk adults across Minnesota.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://mn.gov/senior-linkage-line/" target="_blank" rel="noopener noreferrer">Senior LinkAge Line</a></h3>
+          <p>A free, statewide resource in Minnesota that provides information and assistance for older adults and their families. It helps navigate services related to health care, housing, financial support, and more. With personalized guidance, the Senior LinkAge Line connects individuals to local resources to enhance their quality of life and promote independence.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://disabilityhubmn.org/" target="_blank" rel="noopener noreferrer">Disability Hub MN</a></h3>
+          <p>A free, statewide resource designed to help Minnesotans with disabilities and their families access services and support. It offers personalized guidance on topics like health care, housing, employment, transportation, and advocacy. The Hub connects individuals with the right resources and empowers them to make informed decisions about their care and independence.</p>
+        </div>
+      </section>
+
+      <section class="tools-section">
+        <div class="resource-card">
+          <h3><a href="https://www.centerforhoarding.org/uniform-inspection-checklist/" target="_blank" rel="noopener noreferrer">Center for Hoarding and Cluttering – Uniform Inspection Checklist</a></h3>
+          <p>The Center for Hoarding and Cluttering offers a comprehensive inspection tool called the Uniform Inspection Checklist (UIC), designed to assess and track safety and sanitation in environments affected by hoarding. It emphasizes a harm-reduction approach and aims to support individuals, families, and professionals in addressing both physical and psychological aspects of hoarding. It is adaptable for use by both trained professionals and other parties involved in hoarding situations.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://www.challengingdisorganization.org/content/icd-clutter-hoarding-scale" target="_blank" rel="noopener noreferrer">The Institute for Challenging Disorganization – The ICD Clutter-Hoarding Scale</a></h3>
+          <p><a href="https://www.challengingdisorganization.org/content/icd-clutter-hoarding-scale" target="_blank" rel="noopener noreferrer">Quick Reference Guide</a> | <a href="https://www.challengingdisorganization.org/content/icd-quality-of-life-scale" target="_blank" rel="noopener noreferrer">The ICD Quality of Life Scale</a></p>
+          <p>The Clutter–Hoarding Scale® provides a detailed framework for assessing household clutter and hoarding. It uses five levels of assessment, ranging from Level I (low) to Level V (severe).</p>
+          <ul>
+            <li><strong>Level I (Green – Low):</strong> Standard household, no significant issues.</li>
+            <li><strong>Level II (Blue – Guarded):</strong> A major exit is blocked, some systems not functioning properly.</li>
+            <li><strong>Level III (Yellow – Elevated):</strong> Clutter significantly obstructs household functions.</li>
+            <li><strong>Level IV (Orange – High):</strong> More severe clutter and potential structural damage.</li>
+            <li><strong>Level V (Red – Severe):</strong> Extreme hoarding, health and safety at risk.</li>
+          </ul>
+          <p>This scale helps professionals determine the degree of support needed in hoarding situations, with Level III often being a tipping point where deeper intervention is necessary.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://hoarding.iocdf.org/for-individuals/clutter-image-rating/" target="_blank" rel="noopener noreferrer">The International OCD Foundation – Clutter Image Rating Scale</a></h3>
+          <p>A visual scale used to assess the degree of clutter in a household, ranging from minimal clutter (Level 1) to severe hoarding (Level 9). Each image depicts a household space with varying amounts of clutter to help guide professionals in determining appropriate interventions.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://www.wghoardingresponse.com/10-steps" target="_blank" rel="noopener noreferrer">Wellington-Guelph 10 Steps to a Safer, Healthier and More Comfortable Home</a></h3>
+          <p>The Hoarding Response Checklist provides structured guidelines to ensure that all critical factors are considered in the assessment of hoarding situations, from structural issues to sanitation, safety, and health.</p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://www.masshousing.com/" target="_blank" rel="noopener noreferrer">MassHousing</a></h3>
+          <p>An independent, nonprofit agency in Massachusetts dedicated to supporting affordable housing opportunities. It provides financing for affordable rental housing, homeownership loans, and resources for housing developers and communities.</p>
+        </div>
+        <div class="resource-card">
+          <h3>Network For Hoarding Professionals</h3>
+          <p>To become a part of this group, email Mary Coalson at <a href="mailto:Mary.Coalson@aaaphx.org">Mary.Coalson@aaaphx.org</a></p>
+        </div>
+        <div class="resource-card">
+          <h3><a href="https://www.hoardingconnection.org/" target="_blank" rel="noopener noreferrer">The Hoarding Connection of Cuyahoga County</a></h3>
+          <p>A collaborative network focused on addressing hoarding disorder through education, outreach, and coordinated community response. It provides resources for individuals, families, and professionals, including support groups, training, and intervention strategies.</p>
+        </div>
+      </section>
+
+      <section class="reading-section">
+        <h2>Recommended Reading</h2>
+        <ul>
+          <li>Buried in Treasures, 2nd Edition. David F Tolin, Randy O. Frost, and Gail Steketee, 2014</li>
+          <li>Stuff: Compulsive Hoarding and the Meaning of Things — Randy O Frost and Gail Steketee, 2011</li>
+          <li>Making Space Clutter Free — Tracy McCubbin, 2019</li>
+          <li>Make Space for Happiness: How to stop attracting clutter and State Magnetizing the Life You Want — Tracy McCubbin</li>
+          <li>Digging Out: Helping Your Loved One Manage Clutter, Hoarding and Compulsive Acquiring — Michael A. Tompkins, Tamara Hartl, Randy O. Frost (forward) and Gail Steketee (forward)</li>
+          <li>The Hoarding Handbook, A Guide for Service Professionals — Christiana Bratiotis, Gail Steketee, Christina Sorrentino Schmalisch, 2011</li>
+        </ul>
+      </section>
     </div>
   </div>
 
 </BaseLayout>
+
+<style>
+.banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: var(--space-8);
+}
+.resource-section,
+.tools-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+.resource-card {
+  background: var(--color-bg-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 8px 8px 0;
+  padding: var(--space-6);
+}
+.resource-card h3 {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-lg);
+}
+.resource-card ul {
+  margin: var(--space-3) 0;
+}
+.reading-section {
+  margin-bottom: var(--space-12);
+}
+.reading-section h2 {
+  margin-bottom: var(--space-4);
+}
+</style>

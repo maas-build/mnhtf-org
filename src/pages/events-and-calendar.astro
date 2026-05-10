@@ -5,56 +5,88 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <div class="page-content">
     <div class="container">
-      <h1>Events &amp; Calendar</h1>
 
       <section class="meetings">
-        <h2>MNHTF Public Education &amp; Business Meetings</h2>
-        <p>This is a combined meeting, with the educational part earlier in the meeting.</p>
+        <h3>MNHTF Public Education &amp; Business Meetings</h3>
         <ul>
+          <li>This is a combined meeting, with the educational part earlier in the meeting.</li>
           <li>Open to the public – you are welcome to visit one time or multiple times</li>
           <li>Location varies throughout the metro area – please check carefully where the next meeting will be held</li>
           <li>We encourage you to come in-person</li>
           <li>To attend virtually please email ahead at least one full day so an invitation can be emailed to you</li>
+          <li>Come to learn, network, and see what we are working on.</li>
         </ul>
         <p>Please email us at: <a href="mailto:info@mnhtf.org">info@mnhtf.org</a></p>
-        <p>Come to learn, network, and see what we are working on.</p>
+      </section>
+
+      <section class="event-photos">
+        <div class="photos-grid">
+          <img src="/images/Lets-Talk-About-Hoarding-Booth.jpg" alt="Let's Talk About Hoarding Booth" />
+          <img src="/images/MN-HTF.jpg" alt="Minnesota Hoarding Task Force" />
+        </div>
       </section>
 
       <section class="past-events">
-        <h2>Past Events of the Minnesota Hoarding Task Force</h2>
+        <h4>Past Events Of The Minnesota Hoarding Task Force</h4>
         <p>The MN Hoarding Task Force has led or participated in a variety of events over the last several years. We have many volunteers who have generously donated their time and skills to community events including safety days, educational forums for community members and professional groups.</p>
-        <p>We have collaborated with groups like NAMI (National Alliance on Mental Illness), The Elder Justice Center, first responders, Cities and Counties and more. We have also enjoyed a fundraising-shredding event in our partnership with Shred Right for Good, Summit Investment Advisors, Professional Rehabilitation Consultants and Junk Masters.</p>
+        <p>We have collaborated with groups like NAMI (National Alliance on Mental Illness), The Elder Justice Center, first responders, Cities and Counties and more.</p>
+        <p>We have also enjoyed a fundraising-shredding event in our partnership with Shred Right for Good, Summit Investment Advisors, Professional Rehabilitation Consultants and Junk Masters.</p>
         <p>We look forward to many more ways to connect with and serve this community and welcome your ideas and partnership in the coming months and years.</p>
       </section>
 
       <section class="media">
-        <h2>In the Media</h2>
-        <div class="media-grid">
-          <div class="media-item">
-            <h3>What does it mean to be a hoarder?</h3>
-            <p>Hear Jayme Kalbo and Katie Fetterly discuss the definition with Associates at WCCO!</p>
-            <div class="video-embed">
-              <iframe
-                src="https://www.youtube.com/embed/videoseries?list=PLhoarding1"
-                title="WCCO interview on hoarding definition"
-                width="560"
-                height="315"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy"
-              ></iframe>
-            </div>
+        <h2>IN THE MEDIA</h2>
+
+        <div class="media-item media-item--video-left">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/VVU0-z4d-gE"
+              title="What does it mean to be a hoarder? WCCO"
+              width="560"
+              height="315"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
           </div>
-          <div class="media-item">
-            <h3>Why does hoarding happen?</h3>
-            <p>Watch Wade Crandall, Clinical Site Director at Nystrom &amp; Associates on WCCO, to find out!</p>
-          </div>
-          <div class="media-item">
-            <h3>Channel 9 Feature</h3>
-            <p>Thank you Minnesota Hoarding Task Force Members Jayme Kolbo and Louise Kurzeka for sharing information with the community and Alix Kendall on Channel 9.</p>
+          <div class="media-text">
+            <p>What does it mean to be a hoarder? Hear Jayme Kalbo and Katie Fetterly discuss the definition with Associates at WCCO!</p>
           </div>
         </div>
-        <p><a href="https://www.youtube.com/@mnhtf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit Our YouTube Channel</a></p>
+
+        <div class="media-item media-item--video-right">
+          <div class="media-text">
+            <p>Why does hoarding happen? Watch Wade Crandall, Clinical Site Director at Nystrom &amp; Associates on WCCO, to find out!</p>
+          </div>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/pYOiwiUL0wU"
+              title="Breaking down the psychology behind hoarding - WCCO"
+              width="560"
+              height="315"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="media-item media-item--video-left">
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/1QX4fMb6wpo"
+              title="Getting a handle on hoarding - KMSP FOX 9"
+              width="560"
+              height="315"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="media-text">
+            <p>Thank you Minnesota Hoarding Task Force Members Jayme Kolbo and Louise Kurzeka for sharing information with the community and Alix Kendall on Channel 9. Check it out!</p>
+          </div>
+        </div>
       </section>
     </div>
   </div>
@@ -65,23 +97,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 .meetings, .past-events, .media {
   margin-bottom: var(--space-12);
 }
-.media-grid {
+.event-photos {
+  margin-bottom: var(--space-12);
+}
+.photos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--space-6);
-  margin: var(--space-6) 0;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+.photos-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
 }
 .media-item {
-  background: var(--color-bg-light);
-  border-radius: 8px;
-  padding: var(--space-6);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: center;
+  margin-bottom: var(--space-12);
+}
+.media-text {
+  font-size: var(--font-size-lg);
 }
 .video-embed {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  margin-top: var(--space-4);
 }
 .video-embed iframe {
   position: absolute;
@@ -89,5 +133,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   left: 0;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 768px) {
+  .photos-grid {
+    grid-template-columns: 1fr;
+  }
+  .media-item {
+    grid-template-columns: 1fr;
+  }
+  .media-item--video-right .media-text {
+    order: 2;
+  }
+  .media-item--video-right .video-embed {
+    order: 1;
+  }
 }
 </style>

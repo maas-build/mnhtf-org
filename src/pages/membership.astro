@@ -5,138 +5,142 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <div class="page-content">
     <div class="container">
-      <h1>Membership</h1>
-      <h2>Membership Information</h2>
 
-      <section class="membership-types">
-        <h3>Types of Memberships</h3>
+      <div class="membership-layout">
+        <div class="membership-info">
+          <h3>Membership Information</h3>
+          <h2>Types of Memberships:</h2>
 
-        <div class="type-grid">
-          <div class="type-card">
-            <h4>Regular Membership</h4>
+          <div class="type-block">
+            <p><span class="type-label">Regular Membership</span></p>
             <p>A regular member completes and submits an annual membership form and pays their annual dues. Regular Members can vote on decisions voted for by the group and are able to serve on the Executive Board.</p>
           </div>
-          <div class="type-card">
-            <h4>Associate Membership</h4>
+
+          <div class="type-block">
+            <p><span class="type-label">Associate Membership</span></p>
             <p>An associate member completes and submits the annual membership form but does not pay annual dues. Associate Members do not have a vote on decisions voted on by the group.</p>
           </div>
-          <div class="type-card">
-            <h4>Board Membership</h4>
-            <p>For board membership, a member must be nominated or self-nominated during the end of the fiscal quarter when the present Director's 2-year term expires. Election occurs at a regular meeting; the new Director must get the majority vote and there must be a quorum as determined via the by-laws.</p>
+
+          <div class="type-block">
+            <p><strong>Board Membership</strong></p>
+            <p>For board membership, a member must be nominated or self-nominated during the end of the fiscal quarter when the present Directors 2-year term expires. The present Board asks for nominations for the Directors of President, Vice-President, Secretary and Treasurer, for all whose term has expired at that time. Election occurs at a regular meeting; the new Director of the term must get the majority vote and there must be a quorum as determined via the by-laws.</p>
+          </div>
+
+          <div class="info-block">
+            <p><strong>Membership period</strong></p>
+            <ul>
+              <li>The membership year runs from May 1- April 30</li>
+              <li>You may join at any time during the year &ndash; (the fee is not prorated).</li>
+              <li>The annual renewal for everyone is May 1</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <p><strong>Privileges &amp; Benefits</strong></p>
+            <ul>
+              <li>Education through speakers and others shared experiences</li>
+              <li>Access to resources on Dropbox</li>
+              <li>Vote at monthly meetings to have a voice</li>
+              <li>Vote for election of officers or become one</li>
+              <li>Use the MNHTF logo on your business website upon annual renewal review by board</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <p><strong>Responsibilities</strong></p>
+            <ul>
+              <li>Use your talents and contacts to further the mission of the MNHTF &ndash; awareness, board development and fundraising</li>
+              <li>Network</li>
+              <li>Regularly attend monthly meetings, (request at least 4 per year)</li>
+              <li>Using person first language and maintain confidentiality of discussions at meetings</li>
+            </ul>
           </div>
         </div>
-      </section>
 
-      <section class="membership-period">
-        <h3>Membership Period</h3>
-        <ul>
-          <li>The membership year runs from May 1 – April 30</li>
-          <li>You may join at any time during the year (the fee is not prorated)</li>
-          <li>The annual renewal for everyone is May 1</li>
-        </ul>
-      </section>
-
-      <section class="privileges">
-        <h3>Privileges &amp; Benefits</h3>
-        <ul>
-          <li>Education through speakers and others' shared experiences</li>
-          <li>Access to resources on Dropbox</li>
-          <li>Vote at monthly meetings to have a voice</li>
-          <li>Vote for election of officers or become one</li>
-          <li>Use the MNHTF logo on your business website upon annual renewal review by board</li>
-        </ul>
-      </section>
-
-      <section class="responsibilities">
-        <h3>Responsibilities</h3>
-        <ul>
-          <li>Use your talents and contacts to further the mission of the MNHTF – awareness, board development and fundraising</li>
-          <li>Network</li>
-          <li>Regularly attend monthly meetings (request at least 4 per year)</li>
-          <li>Use person-first language and maintain confidentiality of discussions at meetings</li>
-        </ul>
-      </section>
-
-      <section class="dues">
-        <h3>Membership Options &amp; Dues</h3>
-        <div class="dues-grid">
-          <div class="dues-card">
-            <span class="dues-type">Individual</span>
-            <span class="dues-amount">$25</span>
+        <div class="membership-join">
+          <div class="join-block">
+            <p>If you pay your membership dues via credit card, please visit <a href="https://givebutter.com/mnhtfmembershipdues" target="_blank" rel="noopener noreferrer">Givebutter</a></p>
+            <p>If paying by check, please mail it to P.O. Box 21483, Eagan, MN 55121</p>
           </div>
-          <div class="dues-card">
-            <span class="dues-type">Single Proprietor Business</span>
-            <span class="dues-amount">$50</span>
+
+          <div class="options-block">
+            <p><strong>Membership Options:</strong></p>
+            <p><span class="dues-item">Individual $25</span></p>
+            <p><span class="dues-item">Single proprietor business: $50</span></p>
+            <p><span class="dues-item">Partnership or larger business: $100</span></p>
+            <p><span class="dues-item">Associate: $0</span></p>
+            <p>Membership Dues are renewed annually.<br />Scholarships may be available for regular membership.</p>
           </div>
-          <div class="dues-card">
-            <span class="dues-type">Partnership or Larger Business</span>
-            <span class="dues-amount">$100</span>
-          </div>
-          <div class="dues-card">
-            <span class="dues-type">Associate</span>
-            <span class="dues-amount">$0</span>
+
+          <a href="https://givebutter.com/mnhtfmembershipdues" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Pay Membership Dues</a>
+
+          <div class="form-block">
+            <h3>Fill out our MNHTF Membership Form online here:</h3>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScw8c_P9rqJwlLDa4L9XK8vhq_ziIhgFB9GhunKpxFIM70oDw/viewform?usp=header" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Electronic Form</a>
+
+            <h3>Print and fill out our MNHTF Membership Form (PDF) here:</h3>
+            <p>* Email completed Form to <a href="mailto:mnhtf.org@gmail.com">mnhtf.org@gmail.com</a></p>
+            <a href="https://mnhtf.org/wp-content/uploads/2026/03/MNHTF-Membership-App-2026-Google-Forms.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Download Form</a>
           </div>
         </div>
-        <p>Membership Dues are renewed annually. Scholarships may be available for regular membership.</p>
-      </section>
+      </div>
 
-      <section class="join">
-        <h2>Pay Membership Dues</h2>
-        <p>If you pay your membership dues via credit card, please visit <a href="https://givebutter.com/mnhtfgeneraldonation" target="_blank" rel="noopener noreferrer">Givebutter</a>.</p>
-        <p>If paying by check, please mail it to P.O. Box 21483, Eagan, MN 55121.</p>
+      <div class="group-photo">
+        <img src="/images/Mn-Hoarding-Task-Force-People.jpg" alt="Minnesota Hoarding Task Force people walking on a nature trail" />
+      </div>
 
-        <h3>Membership Form</h3>
-        <ul>
-          <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf_mnhtf_membership/viewform" target="_blank" rel="noopener noreferrer">Fill out our MNHTF Membership Form online</a></li>
-          <li><a href="/pdfs/MNHTF-Membership-App-2026.pdf" download>Download Membership Form (PDF)</a> — email completed form to <a href="mailto:info@mnhtf.org">info@mnhtf.org</a></li>
-        </ul>
-        <a href="/pdfs/MNHTF-Membership-App-2026.pdf" download class="btn btn-primary">Download Form</a>
-      </section>
     </div>
   </div>
 
 </BaseLayout>
 
 <style>
-.membership-types, .membership-period, .privileges, .responsibilities, .dues, .join {
-  margin-bottom: var(--space-10);
-}
-.type-grid {
+.membership-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-6);
-  margin-top: var(--space-4);
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
 }
-.type-card {
-  background: var(--color-bg-light);
-  border-radius: 8px;
-  padding: var(--space-6);
+.type-block, .info-block {
+  margin-bottom: var(--space-6);
 }
-.type-card h4 {
-  color: var(--color-primary);
-  margin-bottom: var(--space-2);
-}
-.dues-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--space-4);
-  margin: var(--space-4) 0;
-}
-.dues-card {
-  background: var(--color-bg-light);
-  border-radius: 8px;
-  padding: var(--space-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-.dues-type {
+.type-label {
   font-weight: 600;
-  color: var(--color-secondary);
-}
-.dues-amount {
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
   color: var(--color-primary);
+}
+.join-block, .options-block, .form-block {
+  margin-bottom: var(--space-6);
+}
+.dues-item {
+  display: block;
+  padding: var(--space-1) 0;
+}
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: var(--space-2) var(--space-6);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+.btn-secondary:hover {
+  background: var(--color-primary);
+  color: white;
+}
+.group-photo {
+  margin-top: var(--space-12);
+}
+.group-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  .membership-layout {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

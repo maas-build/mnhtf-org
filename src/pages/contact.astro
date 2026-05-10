@@ -6,21 +6,19 @@ import ContactForm from '../components/ContactForm.astro';
 
   <div class="page-content">
     <div class="container">
-      <h1>Contact Us</h1>
 
       <div class="contact-layout">
         <div class="contact-form-section">
-          <h2>Send Us a Message</h2>
-
           <div class="faq-section">
-            <h3>Frequently Asked Questions (FAQ)</h3>
+            <h5>Frequently Asked Questions (FAQ)</h5>
             <ul>
-              <li>How to help a friend or loved one? Where do I begin?</li>
-              <li>Who can I contact if I am concerned about a Neighbor?</li>
-              <li>Is there any direct service help at a low or no Cost?</li>
-              <li>Are there Support Groups?</li>
-              <li>I have questions about Animal Hoarding?</li>
-              <li>I have questions about Hoarding and losing my housing?</li>
+              <li><a href="/for-friends-and-family/">How to help a friend or loved one?</a></li>
+              <li><a href="/for-people-who-hoard/">Where do I begin?</a></li>
+              <li><a href="/for-friends-and-family/">Who can I contact if I am concerned about a Neighbor?</a></li>
+              <li><a href="/directory/">Is there any direct service help at a low or no Cost?</a></li>
+              <li><a href="/for-people-who-hoard/#support-groups">Are there Support Groups?</a></li>
+              <li><a href="/for-people-who-hoard/#animal-hoarding">I have questions about Animal Hoarding?</a></li>
+              <li><a href="/for-people-who-hoard/">I have questions about Hoarding and losing my housing?</a></li>
             </ul>
           </div>
 
@@ -28,29 +26,51 @@ import ContactForm from '../components/ContactForm.astro';
         </div>
 
         <aside class="contact-info">
-          <h2>Connect with the Task Force</h2>
-          <dl>
-            <dt>Voicemail</dt>
-            <dd><a href="tel:6125685550">612-568-5550</a></dd>
-            <dt>Email</dt>
-            <dd><a href="mailto:info@mnhtf.org">info@mnhtf.org</a></dd>
-            <dt>Facebook</dt>
-            <dd><a href="https://www.facebook.com/mnhtf" target="_blank" rel="noopener noreferrer">facebook.com/mnhtf</a></dd>
-            <dt>Mailing Address</dt>
-            <dd>P.O. Box 21483<br />Eagan, MN 55121</dd>
-          </dl>
+          <h3>Connect with the Task Force</h3>
+          <p><a href="tel:6125685550">Voicemail: 612-568-5550</a></p>
+          <p><a href="mailto:mnhtf.org@gmail.com">Email: mnhtf.org@gmail.com</a></p>
+          <p><a href="https://www.facebook.com/mnhtf/" target="_blank" rel="noopener noreferrer">Facebook</a></p>
+          <p><strong>P.O. Box 21483, Eagan, MN 55121</strong></p>
 
-          <h2>Task Force Executive Board</h2>
-          <ul class="board-list">
-            <li>President &ndash; Jennifer LeClaire Schmidt</li>
-            <li>Vice President Emeritus &ndash; Jacqui Mason</li>
-            <li>Treasurer &ndash; Gail Trenholm</li>
-            <li>Secretary &ndash; Annika Ewing</li>
-            <li>Communications Liaison &ndash; Louise Kurzeka</li>
-            <li>President Emeritus &ndash; Emily Cheesebrow</li>
-          </ul>
+          <div class="board-section">
+            <p><strong>Task Force Executive Board:</strong></p>
+            <p>President &ndash; Jennifer LeClaire Schmidt</p>
+            <p>Vice President Emeritus &ndash; Jacqui Mason</p>
+            <p>Treasurer &ndash; Gail Trenholm</p>
+            <p>Secretary &ndash; Annika Ewing</p>
+            <p>Communications Liaison &ndash; Louise Kurzeka</p>
+            <p>President Emeritus &ndash; Emily Cheesebrow</p>
+          </div>
+
+          <div class="board-photos">
+            <a href="https://mnhtf.org/wp-content/uploads/2023/01/Jennifer.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="https://mnhtf.org/wp-content/uploads/2023/01/Jennifer.jpg" alt="Jennifer LeClaire Schmidt, President" width="80" height="80" />
+              <span>Jennifer LeClaire Schmidt, President</span>
+            </a>
+            <a href="https://mnhtf.org/wp-content/uploads/2023/01/Jacqui-1.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="https://mnhtf.org/wp-content/uploads/2023/01/Jacqui-1.jpg" alt="Jacqui Mason, Vice President" width="80" height="80" />
+              <span>Jacqui Mason, Vice President</span>
+            </a>
+            <a href="https://mnhtf.org/wp-content/uploads/2023/09/NEW-Gail1.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="https://mnhtf.org/wp-content/uploads/2023/09/NEW-Gail1.jpg" alt="Gail Trenholm, Treasurer" width="80" height="80" />
+              <span>Gail Trenholm, Treasurer</span>
+            </a>
+            <a href="https://mnhtf.org/wp-content/uploads/2024/06/IMG_5717.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="https://mnhtf.org/wp-content/uploads/2024/06/IMG_5717.jpg" alt="Annika Ewing, Secretary" width="80" height="80" />
+              <span>Annika Ewing, Secretary</span>
+            </a>
+            <a href="https://mnhtf.org/wp-content/uploads/2023/01/13.-Louise-Kurzeka-15-Edit3500px.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="https://mnhtf.org/wp-content/uploads/2023/01/13.-Louise-Kurzeka-15-Edit3500px.jpg" alt="Louise Kurzeka, Communications Liaison" width="80" height="80" />
+              <span>Louise Kurzeka, Communications Liaison</span>
+            </a>
+            <a href="https://mnhtf.org/wp-content/uploads/2023/01/Emily_Cheesebrow_9283_WEBSIZE-003-headshot.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="https://mnhtf.org/wp-content/uploads/2023/01/Emily_Cheesebrow_9283_WEBSIZE-003-headshot.jpg" alt="Emily Cheesebrow, President Emeritus" width="80" height="80" />
+              <span>Emily Cheesebrow, President Emeritus</span>
+            </a>
+          </div>
         </aside>
       </div>
+
     </div>
   </div>
 
@@ -69,36 +89,58 @@ import ContactForm from '../components/ContactForm.astro';
   padding: var(--space-4) var(--space-6);
   margin-bottom: var(--space-6);
 }
-.faq-section h3 {
+.faq-section h5 {
   margin-bottom: var(--space-2);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+}
+.faq-section ul {
+  margin: 0;
+  padding-left: var(--space-4);
+}
+.faq-section li {
+  margin-bottom: var(--space-1);
 }
 .contact-info {
   background: var(--color-bg-light);
   border-radius: 8px;
   padding: var(--space-6);
 }
-.contact-info dl {
-  margin: 0 0 var(--space-6);
+.contact-info h3 {
+  margin-bottom: var(--space-4);
 }
-.contact-info dt {
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-top: var(--space-3);
+.contact-info p {
+  margin: var(--space-2) 0;
 }
-.contact-info dd {
-  margin: 0;
+.board-section {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
 }
-.board-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.board-section p {
+  margin: var(--space-1) 0;
 }
-.board-list li {
-  padding: var(--space-1) 0;
-  border-bottom: 1px solid var(--color-border);
+.board-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  margin-top: var(--space-4);
 }
-.board-list li:last-child {
-  border-bottom: none;
+.board-photos a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 0.7rem;
+  text-align: center;
+}
+.board-photos img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 @media (max-width: 768px) {
   .contact-layout {

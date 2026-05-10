@@ -12,22 +12,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <p>Through workshops, community presentations, and a library of resources, we empower people to recognize the signs of hoarding, understand its impact, and connect with the support systems available. Whether you're seeking guidance for a loved one, training as a professional, or learning to better support your community, our mission is to provide accessible, practical knowledge that drives meaningful change.</p>
 
-      <div class="youtube-section">
-        <h2>MNHTF YouTube Channel</h2>
-        <p>Watch our educational videos on hoarding disorder, featuring expert interviews, community discussions, and more.</p>
-        <a href="https://www.youtube.com/@mnhtf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit Our YouTube Channel</a>
+      <div class="videos-grid">
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/I13Q37paLzA"
+            title="MNHTF 2024 - Supporting Loved Ones with Anxiety - Guest Speaker Jayme Kolbo, LPCC"
+            width="560"
+            height="315"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/Z1LZY1l6dNY"
+            title="MNHTF hosts Bridging.org"
+            width="560"
+            height="315"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/iy7kcA3GC1Q"
+            title="MNHTF Guest Speaker Dakota County August 1, 2024"
+            width="560"
+            height="315"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
       </div>
 
-      <div class="resources-section">
-        <h2>Educational Resources</h2>
-        <p>We offer a variety of resources to help you learn more about hoarding disorder:</p>
-        <ul>
-          <li>Community presentations and workshops</li>
-          <li>Speaker requests for your organization or event</li>
-          <li>Printed and digital educational materials</li>
-          <li>Connections to professional training programs</li>
-        </ul>
-        <p>To request a speaker or educational presentation for your group, <a href="/contact/">contact us</a>.</p>
+      <div class="youtube-cta">
+        <a href="https://www.youtube.com/@mnhoardingtaskforce1757" target="_blank" rel="noopener noreferrer" class="btn btn-primary">MNHTF YouTube Channel</a>
       </div>
     </div>
   </div>
@@ -35,10 +57,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-.youtube-section, .resources-section {
-  margin-top: var(--space-12);
-  padding: var(--space-8);
-  background: var(--color-bg-light);
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-8) 0;
+}
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
   border-radius: 8px;
+}
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.youtube-cta {
+  margin-top: var(--space-8);
+  text-align: center;
 }
 </style>

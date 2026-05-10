@@ -1,110 +1,67 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ResourceList from '../components/ResourceList.astro';
-
-const resources = [
-  {
-    name: "Mutual Support for HD",
-    url: "https://www.mutualsupportforhd.com/",
-    description: "A platform that offers virtual support groups and resources for individuals dealing with various mental health challenges, including hoarding disorder (HD). The website provides access to online communities where people can connect in a safe and supportive environment, share experiences, and find encouragement."
-  },
-  {
-    name: "Center for Hoarding and Cluttering",
-    url: "https://www.centerforhoarding.org/",
-    description: "An organization dedicated to supporting individuals impacted by hoarding disorder. It offers resources, education, and advocacy to address the challenges associated with hoarding behaviors. CHC provides services such as support groups, training, and consultations for individuals, families, and professionals."
-  },
-  {
-    name: "Institute for Challenging Disorganization",
-    url: "https://www.challengingdisorganization.org/",
-    description: "A nonprofit organization dedicated to education, research, and strategies for addressing chronic disorganization, including hoarding disorder. It offers resources for individuals, families, and professionals, including training programs, publications, and a robust support network."
-  },
-  {
-    name: "International OCD Foundation",
-    url: "https://hoarding.iocdf.org/",
-    description: "Offers a dedicated resource center focused on hoarding disorder. This platform provides comprehensive information about the condition, including diagnostic criteria, treatment options, and support resources for individuals, families, and professionals."
-  },
-  {
-    name: "Wellington-Guelph Hoarding Response",
-    url: "https://www.wghoardingresponse.com/",
-    description: "Offers comprehensive resources and support for individuals dealing with hoarding behaviors, their families, and service providers. It emphasizes harm reduction, safety, and person-centered care. WGHR provides tools like risk assessment scales, educational workshops, and e-learning modules."
-  }
-];
 ---
 <BaseLayout title="Directory" description="Resources for individuals, families, and professionals dealing with hoarding disorder in Minnesota.">
 
   <div class="page-content">
     <div class="container">
-      <h1>Resource Directory</h1>
 
-      <p>The Minnesota Hoarding Task Force does not provide services directly. We provide resources and information regarding the general subject of hoarding. Use the links below to find help and support.</p>
+      <p class="disclaimer"><em><strong>Disclaimer:</strong> The Minnesota Hoarding Task Force ("MN HTF") does not provide services directly. MN HTF provides resources and information regarding the general subject of hoarding. In doing so, MN HTF does not endorse, recommend, warrant, or assume any legal liability for the accuracy, completeness, or usefulness of any information, apparatus, product, or process.</em></p>
 
-      <div class="download-links">
-        <h2>Downloadable Resources</h2>
-        <ul>
-          <li><a href="/pdfs/MN-Hoarding-Taskforce-Comprehensive-Resource-List.pdf" download>Directory of Resources (PDF)</a></li>
-          <li><a href="/pdfs/MNHTF-Final-How-to-Help-Brochure.pdf" download>Donation Resource List (PDF)</a></li>
-        </ul>
+      <div class="download-section">
+        <h2>Directory of Resources to Download:</h2>
+        <p><a href="https://mnhtf.org/wp-content/uploads/2025/11/11_15_25-MN-Hoarding-Taskforce-Comprehensive-Resource-List-.xlsx.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Click here</a></p>
+      </div>
+
+      <div class="download-section">
+        <h2>Donation Resource List to download:</h2>
+        <p><a href="https://bridging.org/wp-content/uploads/2025/06/BridgingDonorResourceListRevApril25-1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Click here</a></p>
+      </div>
+
+      <div class="brochure-section">
+        <a href="/pdfs/MNHTF-Final-How-to-Help-Brochure.pdf" download>
+          <img src="/images/Screenshot-2024-07-21-directory.png" alt="MN HTF How to Help Brochure" class="brochure-img" />
+        </a>
       </div>
 
       <div class="youtube-cta">
-        <h2>Check Out Our YouTube Channel!</h2>
-        <p><a href="https://www.youtube.com/@mnhtf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">MNHTF YouTube</a></p>
+        <p>Check Out Our YouTube Channel!</p>
+        <a href="https://www.youtube.com/@mnhoardingtaskforce1757" target="_blank" rel="noopener noreferrer" class="btn btn-primary">MNHTF YouTube</a>
       </div>
 
-      <h2>Online Resources</h2>
-      <ResourceList resources={resources} />
-
-      <div class="audience-links">
-        <h2>Resources by Audience</h2>
-        <div class="audience-grid">
-          <a href="/for-people-who-hoard/" class="audience-card">
-            <h3>I am struggling with Hoarding Disorder&hellip;</h3>
-          </a>
-          <a href="/for-friends-and-family/" class="audience-card">
-            <h3>I am a friend or family member&hellip;</h3>
-          </a>
-          <a href="/for-municipalities/" class="audience-card">
-            <h3>I am a Municipality&hellip;</h3>
-          </a>
-          <a href="/for-property-managers/" class="audience-card">
-            <h3>I am a Property Manager&hellip;</h3>
-          </a>
-          <a href="/coming-soon/" class="audience-card">
-            <h3>I am a Mental Health Professional&hellip;</h3>
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 
 </BaseLayout>
 
 <style>
-.download-links, .youtube-cta, .audience-links {
+.disclaimer {
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+.download-section {
+  margin-bottom: var(--space-8);
+}
+.download-section h2 {
+  margin-bottom: var(--space-3);
+}
+.brochure-section {
   margin: var(--space-8) 0;
+  text-align: center;
 }
-.audience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--space-4);
-  margin-top: var(--space-4);
+.brochure-img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
 }
-.audience-card {
-  display: block;
-  background: var(--color-bg-light);
-  border: 2px solid var(--color-border);
-  border-radius: 8px;
-  padding: var(--space-4);
-  text-decoration: none;
-  color: var(--color-primary);
+.youtube-cta {
+  margin: var(--space-8) 0;
+  text-align: center;
+}
+.youtube-cta p {
+  font-size: var(--font-size-xl);
   font-weight: 600;
-  transition: border-color var(--transition);
-}
-.audience-card:hover {
-  border-color: var(--color-primary);
-}
-.audience-card h3 {
-  margin: 0;
-  font-size: var(--font-size-base);
+  margin-bottom: var(--space-4);
 }
 </style>

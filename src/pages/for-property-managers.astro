@@ -1,51 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ResourceList from '../components/ResourceList.astro';
-
-const resources = [
-  {
-    name: "Mutual Support for HD",
-    url: "https://www.mutualsupportforhd.com/",
-    description: "A platform that offers virtual support groups and resources for individuals dealing with various mental health challenges, including hoarding disorder (HD). The website provides access to online communities where people can connect in a safe and supportive environment, share experiences, and find encouragement."
-  },
-  {
-    name: "Center for Hoarding and Cluttering",
-    url: "https://www.centerforhoarding.org/",
-    description: "An organization dedicated to supporting individuals impacted by hoarding disorder. It offers resources, education, and advocacy to address the challenges associated with hoarding behaviors. CHC provides services such as support groups, training, and consultations for individuals, families, and professionals."
-  },
-  {
-    name: "Institute for Challenging Disorganization",
-    url: "https://www.challengingdisorganization.org/",
-    description: "A nonprofit organization dedicated to education, research, and strategies for addressing chronic disorganization, including hoarding disorder. It offers resources for individuals, families, and professionals, including training programs, publications, and a robust support network."
-  },
-  {
-    name: "International OCD Foundation",
-    url: "https://hoarding.iocdf.org/",
-    description: "Offers a dedicated resource center focused on hoarding disorder. This platform provides comprehensive information about the condition, including diagnostic criteria, treatment options, and support resources for individuals, families, and professionals."
-  },
-  {
-    name: "Wellington-Guelph Hoarding Response",
-    url: "https://www.wghoardingresponse.com/",
-    description: "Offers comprehensive resources and support for individuals dealing with hoarding behaviors, their families, and service providers. It emphasizes harm reduction, safety, and person-centered care. WGHR provides tools like risk assessment scales, educational workshops, and e-learning modules."
-  },
-  {
-    name: "Center for Hoarding and Cluttering – Uniform Inspection Checklist",
-    url: "https://www.centerforhoarding.org/uniform-inspection-checklist/",
-    description: "The Center for Hoarding and Cluttering offers a comprehensive inspection tool called the Uniform Inspection Checklist (UIC), designed to assess and track safety and sanitation in environments affected by hoarding. Property managers can use this tool to work with residents."
-  }
-];
 ---
 <BaseLayout title="For Property Managers" description="Tools and guidance for property managers dealing with hoarding situations in rental housing.">
 
   <div class="page-content">
     <div class="container">
-      <h1>For Property Managers</h1>
+
+      <div class="directory-link-block">
+        <a href="/directory/">Back to Directory</a>
+      </div>
 
       <p>In property management we aim to keep all our residents safe and living in healthy and cared for homes. Every owner or manager may have their own maintenance and housekeeping standards for housing inspections. Other agencies such as cities, counties, HUD or USDA have code standards that they inspect for and issue correction orders on. Multiple priorities/standards can make it a challenge when we find that a resident is struggling with clutter and hoarding.</p>
 
       <p>When a clutter and hoarding condition is discovered, it is best practice to involve the resident and their current support system to work together on getting their home to a place where an inspection can be passed. If you are speaking with those who are supporting a resident, it is important to obtain permission to do so.</p>
 
-      <h2>Initial Focus Areas</h2>
       <p>It is suggested to focus initially on health and safety issues which can include:</p>
       <ul>
         <li>Access to egress from the home in case of emergency</li>
@@ -56,18 +24,99 @@ const resources = [
         <li>Determine which environmental hazards must be corrected immediately</li>
       </ul>
 
-      <h2>Next Steps</h2>
-      <p>Next, move to an approach that sets areas of focus and timelines:</p>
+      <p>Next, move to an approach that sets areas of focus and timelines.</p>
       <ul>
         <li>Offer objective instructions. Required action must be communicated clearly with specific language.</li>
         <li>Use tools such as the Uniform Inspection Checklist (can be found below)</li>
         <li>Talk with the resident and their supports about specific areas of focus and timelines.</li>
       </ul>
 
-      <p>There are tools below that can be helpful in working with residents to achieve the standards to pass inspections.</p>
+      <p>There are tools below that can be helpful in working with residents to achieve the standards to pass inspections. Property Management can use these tools to work with residents.</p>
 
-      <ResourceList resources={resources} />
+      <div class="resources-section">
+        <p><a href="https://www.mutual-support.com/virtual_bit" target="_blank" rel="noopener noreferrer"><strong>Mutual Support for HD</strong></a> is a platform that offers virtual support groups and resources for individuals dealing with various mental health challenges, including hoarding disorder (HD). The website provides access to online communities where people can connect in a safe and supportive environment, share experiences, and find encouragement. Its virtual groups often focus on specific topics, helping members work together to address challenges and improve their mental health.</p>
+
+        <p><a href="http://www.centerforhoardingandcluttering.com/" target="_blank" rel="noopener noreferrer"><strong>Center for Hoarding and Cluttering</strong></a> is an organization dedicated to supporting individuals impacted by hoarding disorder. It offers resources, education, and advocacy to address the challenges associated with hoarding behaviors. CHC provides services such as support groups, training, and consultations for individuals, families, and professionals, aiming to foster understanding and promote effective strategies for managing hoarding and improving overall well-being.</p>
+
+        <p><a href="http://www.challengingdisorganization.org/" target="_blank" rel="noopener noreferrer"><strong>Institute for Challenging Disorganization</strong></a> is a nonprofit organization dedicated to education, research, and strategies for addressing chronic disorganization, including hoarding disorder. It offers resources for individuals, families, and professionals, including training programs, publications, and a robust support network. The ICD aims to empower people to create sustainable organizational solutions and improve their quality of life while raising awareness about the challenges of disorganization and its related conditions.</p>
+
+        <p><a href="https://hoarding.iocdf.org/" target="_blank" rel="noopener noreferrer"><strong>International OCD Foundation</strong></a> offers a dedicated resource center focused on hoarding disorder. This platform provides comprehensive information about the condition, including diagnostic criteria, treatment options, and support resources for individuals, families, and professionals. It aims to raise awareness and understanding of hoarding disorder, promoting effective interventions and support strategies.</p>
+
+        <p><a href="https://wghoardingresponse.ca/" target="_blank" rel="noopener noreferrer"><strong>Wellington-Guelph Hoarding Response</strong></a> offers comprehensive resources and support for individuals dealing with hoarding behaviors, their families, and service providers. It emphasizes harm reduction, safety, and person-centered care. WGHR provides tools like risk assessment scales, educational workshops, and e-learning modules tailored to address hoarding challenges. Their services include free community presentations, annual workshops with expert speakers, and collaboration with local agencies to create multidisciplinary support teams.</p>
+      </div>
+
+      <div class="tools-section">
+        <p><a href="http://centerforhoardingandcluttering.com/uniform-inspection-checklist-2/" target="_blank" rel="noopener noreferrer"><strong>Center for Hoarding and Cluttering &ndash; Uniform Inspection Checklist</strong></a></p>
+        <p><strong>The Center for Hoarding and Cluttering</strong> offers a comprehensive inspection tool called the <a href="http://centerforhoardingandcluttering.com/uniform-inspection-checklist-2/" target="_blank" rel="noopener noreferrer">Uniform Inspection Checklist</a> (UIC), designed to assess and track safety and sanitation in environments affected by hoarding. It emphasizes a harm-reduction approach and aims to support individuals, families, and professionals in addressing both physical and psychological aspects of hoarding. The checklist is based on a variety of standards, including housing codes, fire safety, and health guidelines, and provides measurable progress markers to guide intervention. It is adaptable for use by both trained professionals and other parties involved in hoarding situations.</p>
+
+        <hr />
+
+        <p><a href="https://www.challengingdisorganization.org/clutter-hoarding-scale-" target="_blank" rel="noopener noreferrer"><strong>The Institute for Challenging Disorganization &ndash; The ICD Clutter-Hoarding Scale</strong></a></p>
+        <p><a href="https://www.challengingdisorganization.org/wp-content/uploads/2024/09/ICD-C-HS-2019-Quick-Guide-1.pdf" target="_blank" rel="noopener noreferrer">Quick Reference Guide</a></p>
+        <p><a href="https://form.jotform.com/50614991787165" target="_blank" rel="noopener noreferrer">The ICD Quality of Life Scale</a></p>
+        <p><strong>The Clutter&ndash;Hoarding Scale</strong>&reg; by the Institute for Challenging Disorganization (ICD) provides a detailed framework for assessing household clutter and hoarding. It uses five levels of assessment, ranging from Level I (low) to Level V (severe), with specific categories to evaluate the environment, including structural integrity, animal and pest control, household functionality, and health and safety.</p>
+        <ul>
+          <li><strong>Level I (Green &ndash; Low)</strong>: This represents a standard household with no significant issues. All systems (plumbing, electrical, HVAC) are functional, and there is no clutter obstructing household functions.</li>
+          <li><strong>Level II (Blue &ndash; Guarded)</strong>: Here, a major exit is blocked, and some systems are not functioning properly. There may also be minor issues with animals or pests and slight clutter in key living areas.</li>
+          <li><strong>Level III (Yellow &ndash; Elevated)</strong>: At this stage, clutter significantly obstructs household functions, and some rooms may not be used for their intended purposes. There is also evidence of pests or sanitation issues.</li>
+          <li><strong>Level IV (Orange &ndash; High)</strong>: More severe clutter and potential structural damage are present. The situation requires a collaborative team of service providers, such as pest control or mental health professionals, to address the issues.</li>
+          <li><strong>Level V (Red &ndash; Severe)</strong>: This level indicates extreme hoarding, where multiple systems are non-functional, and health and safety are at risk. The environment may be dangerous and requires immediate intervention.</li>
+        </ul>
+        <p>This scale helps professionals determine the degree of support needed in hoarding situations, with Level III often being a tipping point where deeper intervention is necessary.</p>
+
+        <hr />
+
+        <p><a href="https://hoarding.iocdf.org/wp-content/uploads/sites/7/2016/12/Clutter-Image-Rating-3-18-16.pdf" target="_blank" rel="noopener noreferrer"><strong>The International OCD Foundation &ndash; Clutter Image Rating Scale</strong></a></p>
+        <p>The <strong>Clutter Image Rating (CIR)</strong> tool, available on the <strong>International OCD Foundation's</strong> website, is a visual scale used to assess the degree of clutter in a household. It helps clinicians and individuals gauge the severity of clutter by comparing photographs of different living spaces at various stages of clutter. The tool includes a series of images, each representing a different level of clutter, ranging from minimal clutter (Level 1) to severe hoarding (Level 9).</p>
+        <p>Each image depicts a household space with varying amounts of clutter, which helps those affected by hoarding disorder recognize where their environment falls on the scale. It can also guide professionals in determining appropriate interventions.</p>
+
+        <hr />
+
+        <p><a href="https://wghoardingresponse.ca/wp-content/uploads/2019/10/checklist-sidebyside.pdf" target="_blank" rel="noopener noreferrer"><strong>Wellington-Guelph 10 Steps to a Safer, Healthier and More Comfortable Home</strong></a></p>
+        <p>The <strong>Hoarding Response Checklist</strong> from the <strong>West Greater Toronto Hoarding Response</strong> is a tool used to assess and guide intervention for hoarding situations. It is divided into two sections: the first helps evaluate the severity of the clutter in a living space, and the second assesses the potential risks associated with the hoarding behaviors, including health and safety hazards.</p>
+        <p>This checklist is a comprehensive tool for professionals and teams working to intervene in hoarding situations. It provides structured guidelines to ensure that all critical factors are considered in the assessment, from structural issues to sanitation, safety, and health.</p>
+      </div>
+
+      <h3>Networking</h3>
+
+      <div class="networking-section">
+        <p><a href="https://www.mmha.com" target="_blank" rel="noopener noreferrer"><strong>MN Multi Housing Association</strong></a></p>
+        <p>The <strong>Minnesota Multi Housing Association (MHA)</strong> is a leading organization dedicated to advancing the residential rental housing industry in Minnesota. Offering resources, advocacy, and education, MHA supports property owners, managers, and industry professionals in delivering quality housing. The organization also provides tools for navigating industry trends, legal updates, and best practices to ensure excellence in the rental market.</p>
+
+        <p><a href="https://www.nahro.org" target="_blank" rel="noopener noreferrer"><strong>NAHRO &ndash; National Association Housing and Redevelopment Officials</strong></a></p>
+        <p>The <strong>National Association of Housing and Redevelopment Officials (NAHRO)</strong> is a premier organization dedicated to creating affordable housing and vibrant communities. It provides advocacy, education, and professional development for housing and community development professionals. NAHRO supports its members in delivering innovative and equitable solutions to address housing challenges across the United States.</p>
+      </div>
+
+      <div class="books-section">
+        <ul>
+          <li><strong>Buried in Treasures</strong>, 2nd Edition. David F Tolin, Randy O. Frost, and Gail Steketee, 2014</li>
+          <li><strong>Stuff</strong>: Compulsive Hoarding and the Meaning of Things, Randy O. Frost and Gail Steketee, 2011</li>
+          <li><strong>Making Space Clutter Free</strong>, Tracy McCubbin, 2019</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 
 </BaseLayout>
+
+<style>
+.directory-link-block {
+  margin-bottom: var(--space-6);
+}
+.resources-section, .tools-section, .networking-section {
+  margin: var(--space-8) 0;
+}
+.tools-section hr {
+  margin: var(--space-6) 0;
+  border: none;
+  border-top: 1px solid var(--color-border);
+}
+.books-section {
+  margin-top: var(--space-8);
+}
+h3 {
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+}
+</style>
