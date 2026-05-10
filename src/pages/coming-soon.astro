@@ -1,21 +1,79 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="Coming Soon" description="This page is coming soon. Check back later for more resources.">
 
-  <div class="page-content">
-    <div class="container coming-soon-container">
-      <h1>Coming Soon</h1>
-      <p>We are working on resources for this section. Please check back soon.</p>
-      <p>In the meantime, you can <a href="/contact/">contact us</a> with any questions or visit our <a href="/directory/">Resource Directory</a>.</p>
+<BaseLayout
+  title="Therapists and Health Care Workers"
+  description="The Minnesota Hoarding Task Force website will have more information on this web page. Please come back soon!"
+>
+  <div class="coming-soon-page">
+    <h1 class="sr-only">Therapists and Health Care Workers</h1>
+
+    <div class="panel panel--top">
+      <img
+        src="/images/coming-soon-banner.png"
+        alt=""
+        aria-hidden="true"
+        class="banner-image"
+        width="1077"
+        height="384"
+      />
+    </div>
+
+    <div class="panel panel--flyer">
+      <img
+        src="/images/coming-soon-flyer.jpg"
+        alt="OCD and Anxiety Wellness Collective in partnership with Minnesota Hoarding Task Force. Join us virtually on the 3rd Thursday of each month at 11am CST for a Hoarding Professionals Community Consult Group."
+        class="flyer-image"
+        width="1728"
+        height="2304"
+      />
     </div>
   </div>
-
 </BaseLayout>
 
 <style>
-.coming-soon-container {
-  text-align: center;
-  padding: var(--space-16) var(--space-4);
+.coming-soon-page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4) var(--space-16);
+}
+
+.panel + .panel {
+  margin-top: var(--space-16);
+}
+
+.banner-image,
+.flyer-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.flyer-image {
+  max-width: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .coming-soon-page {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-12);
+  }
+
+  .panel + .panel {
+    margin-top: var(--space-12);
+  }
 }
 </style>
