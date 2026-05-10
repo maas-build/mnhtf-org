@@ -5,17 +5,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- Hero banner — image carries the title text -->
   <div class="hero">
-    <img src="/images/Property-Manager.png" alt="I Am a Property Manager" class="hero-img" />
-    <h1 class="sr-only">I Am a Property Manager</h1>
+    <a href="/directory/" aria-label="Back to Directory">
+      <img src="/images/Property-Manager.png" alt="I Am a Property Manager" class="hero-img" />
+    </a>
   </div>
 
   <div class="page-content">
     <div class="container pm-page">
-
-      <!-- ── Breadcrumb ── -->
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/directory/" class="breadcrumb-link">← Back to Directory</a>
-      </nav>
 
       <!-- ── Intro Card ── -->
       <section class="card intro-card" aria-label="Introduction">
@@ -237,30 +233,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   ───────────────────────────────────────────────────── */
   .pm-page {
     padding-bottom: var(--space-16);
-  }
-
-  /* ─────────────────────────────────────────────────────
-     Breadcrumb
-  ───────────────────────────────────────────────────── */
-  .breadcrumb {
-    margin-bottom: var(--space-6);
-  }
-  .breadcrumb-link {
-    font-size: var(--font-size-base);
-    color: var(--color-primary);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    font-weight: 600;
-  }
-  .breadcrumb-link:hover {
-    text-decoration: underline;
-  }
-  .breadcrumb-link:focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 3px;
-    border-radius: 2px;
   }
 
   /* ─────────────────────────────────────────────────────
