@@ -7,41 +7,71 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
       <h1>Ways to Give</h1>
 
-      <h5><mark>When you give to the Minnesota Hoarding Task Force, you're helping bring awareness, education, and support to individuals and families living with hoarding behavior.</mark></h5>
+      <div class="page-banner">
+        <img src="/images/ways-to-give-banner.png" alt="Heart-shaped seed pods on stems, representing growth and giving" />
+      </div>
+
+      <p class="intro-text">When you give to the Minnesota Hoarding Task Force, you're helping bring awareness, education, and support to individuals and families living with hoarding behavior.</p>
 
       <div class="give-now-section">
-        <h5><strong>Ways to Give:</strong> Online Donations<br />Online Donations are fast, easy, and convenient.</h5>
+        <h2>Ways to Give:</h2>
+        <h3 class="giving-heading">Online Donations</h3>
+        <p>Online Donations are fast, easy, and convenient.</p>
         <a href="https://givebutter.com/mnhtfgeneraldonation" target="_blank" rel="noopener noreferrer" class="btn btn-primary">GIVE NOW</a>
       </div>
 
       <div class="giving-details">
-        <div class="giving-col">
-          <h5><strong>Mail-In Donations</strong></h5>
-          <h5>If you prefer to mail-in donation, you can do so at the address below:<br />Minnesota Hoarding Task Force<br />P.O. Box 21483<br />Eagan, MN 55121</h5>
 
-          <h5><strong>Events and Sponsors</strong> For upcoming events and sponsorship opportunities, contact <a href="mailto:mnhtf.org@gmail.com">mnhtf.org@gmail.com</a>.</h5>
-
-          <h5><strong>Match Gifts</strong> Help us double our impact through Corporate Giving. Check with your Employer or Human Resources Department of more information on gift matching.</h5>
-
-          <h5><strong>In-Kinds Gifts</strong> By volunteering your time and talent, you help us make an impact in the community, and your contributions are invaluable.</h5>
-
-          <div class="check-image">
-            <img src="/images/Handing-Over-a-Check.jpg" alt="Handing over a check" />
-          </div>
-
-          <h5><strong>Donation FAQs</strong> <strong>Local Donations</strong> When you donate to the Minnesota Hoarding Task Force, your donation maximizes impact in bringing awareness, education, and resources to those with hoarding behavior and vulnerable individuals.</h5>
-
-          <h5><strong>Tax-Deductible</strong> Your donation is Tax-Deductible, as the Minnesota Hoarding Task Force is a 501(c)(3) organization. (EIN 81-3567154) Which means that your donation is Tax-Deductible as allowed by law.</h5>
-
-          <h5><strong>Personal Information</strong> We respect your privacy and do not sell your email address to others. We will use it to keep you informed of MNHTF events, meetings, and information.</h5>
-
-          <h5><mark>For additional information or questions, please contact us at <a href="mailto:mnhtf.org@gmail.com">mnhtf.org@gmail.com</a>.</mark></h5>
+        <div class="giving-item">
+          <h3 class="giving-heading">Mail-In Donations</h3>
+          <p>If you prefer to mail-in a donation, you can do so at the address below:<br />
+            Minnesota Hoarding Task Force<br />
+            P.O. Box 21483<br />
+            Eagan, MN 55121</p>
         </div>
+
+        <div class="giving-item">
+          <h3 class="giving-heading">Events and Sponsors</h3>
+          <p>For upcoming events and sponsorship opportunities, contact <a href="mailto:mnhtf.org@gmail.com">mnhtf.org@gmail.com</a>.</p>
+        </div>
+
+        <div class="giving-item">
+          <h3 class="giving-heading">Match Gifts</h3>
+          <p>Help us double our impact through Corporate Giving. Check with your Employer or Human Resources Department for more information on gift matching.</p>
+        </div>
+
+        <div class="giving-item">
+          <h3 class="giving-heading">In-Kinds Gifts</h3>
+          <p>By volunteering your time and talent, you help us make an impact in the community, and your contributions are invaluable.</p>
+        </div>
+
+        <div class="check-image">
+          <img src="/images/Handing-Over-a-Check.jpg" alt="Handing over a check" />
+        </div>
+
+        <div class="giving-item">
+          <h3 class="giving-heading">Donation FAQs</h3>
+          <h4 class="sub-heading">Local Donations</h4>
+          <p>When you donate to the Minnesota Hoarding Task Force, your donation maximizes impact in bringing awareness, education, and resources to those with hoarding behavior and vulnerable individuals.</p>
+        </div>
+
+        <div class="giving-item">
+          <h3 class="giving-heading">Tax-Deductible</h3>
+          <p>Your donation is tax-deductible, as the Minnesota Hoarding Task Force is a 501(c)(3) organization (EIN 81-3567154), which means that your donation is tax-deductible as allowed by law.</p>
+        </div>
+
+        <div class="giving-item">
+          <h3 class="giving-heading">Personal Information</h3>
+          <p>We respect your privacy and do not sell your email address to others. We will use it to keep you informed of MNHTF events, meetings, and information.</p>
+        </div>
+
+        <p class="contact-note">For additional information or questions, please contact us at <a href="mailto:mnhtf.org@gmail.com">mnhtf.org@gmail.com</a>.</p>
+
       </div>
 
       <div class="give-mn-badge">
         <a href="https://give.mn/fmb5wf" target="_blank" rel="noopener noreferrer">
-          <img src="/images/HorizontalPrimary.png" alt="GiveMN" height="60" />
+          <img src="/images/HorizontalPrimary.png" alt="GiveMN — donate online" />
         </a>
       </div>
 
@@ -51,34 +81,117 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-h5 {
-  font-size: var(--font-size-base);
-  font-weight: 400;
-  line-height: 1.6;
+/* ── Body text ─────────────────────────────────────── */
+p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  line-height: 1.75;
   margin-bottom: var(--space-4);
 }
-.give-now-section {
-  margin: var(--space-8) 0;
+
+/* ── Hero banner ───────────────────────────────────── */
+.page-banner {
+  margin: var(--space-6) 0 var(--space-8);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.10);
 }
-.giving-details {
-  margin: var(--space-6) 0;
-}
-.check-image {
-  margin: var(--space-6) 0;
-}
-.check-image img {
-  max-width: 400px;
-  height: auto;
+.page-banner img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  object-position: center 60%;
   display: block;
 }
-.give-mn-badge {
+
+/* ── Intro text ────────────────────────────────────── */
+.intro-text {
+  font-size: var(--font-size-xl);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.65;
+  margin-bottom: var(--space-8);
+}
+
+/* ── "Ways to Give:" section title ─────────────────── */
+h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: var(--space-4);
+}
+
+/* ── Give Now section ──────────────────────────────── */
+.give-now-section {
+  margin-bottom: var(--space-12);
+}
+.give-now-section p {
+  margin-bottom: var(--space-6);
+}
+
+/* ── Giving section headings (Mail-In, Events…) ────── */
+.giving-heading {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: var(--space-2);
+}
+
+.sub-heading {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-2);
+}
+
+.giving-item {
+  margin-bottom: var(--space-8);
+}
+
+/* ── Check handover image ──────────────────────────── */
+.check-image {
   margin: var(--space-8) 0;
 }
-.give-mn-badge img {
-  height: 60px;
-  width: auto;
+.check-image img {
+  width: 100%;
+  max-width: 680px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.10);
 }
-mark {
-  background: transparent;
+
+/* ── Contact note ──────────────────────────────────── */
+.contact-note {
+  margin-top: var(--space-8);
+  font-style: italic;
+}
+
+/* ── GiveMN badge ──────────────────────────────────── */
+.give-mn-badge {
+  margin: var(--space-12) 0 var(--space-8);
+}
+.give-mn-badge img {
+  width: 300px;
+  height: auto;
+}
+
+/* ── Mobile ────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .intro-text {
+    font-size: var(--font-size-lg);
+  }
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+  .giving-heading {
+    font-size: var(--font-size-lg);
+  }
+  .page-banner img {
+    max-height: 180px;
+  }
 }
 </style>

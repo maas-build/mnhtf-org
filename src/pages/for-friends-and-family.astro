@@ -3,138 +3,484 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="For Friends and Family" description="If you have a friend or family member with Hoarding Disorder, learn how to help and find support for yourself.">
 
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner container">
+      <h1 class="hero-title">I Am a Friend or Family Member</h1>
+      <p class="hero-subtitle">Learn how to help and find support for yourself.</p>
+    </div>
+  </div>
+
   <div class="page-content">
     <div class="container">
 
-      <img src="/images/Friend-or-Family.png" alt="For Friends and Family" class="banner-img" />
+      <!-- Intro card — green top border signals "support for caregivers" -->
+      <section class="intro-card" aria-labelledby="intro-heading">
+        <h2 id="intro-heading" class="sr-only">Introduction</h2>
+        <p>If you have a friend or family member with Hoarding Disorder, it can be very hard to know how to help. Severe clutter threatens the health and safety of those living in the home and can be a source of conflict. It's important to educate yourself on HD and seek support to help you manage your own feelings and learn coping strategies.</p>
+      </section>
 
-      <p class="intro">If you have a friend or family member with Hoarding Disorder, it can be very hard to know how to help. Severe clutter threatens the health and safety of those living in the home and can be a source of conflict. It's important to educate yourself on HD and seek support to help you manage your own feelings and learn coping strategies.</p>
+      <!-- ── Support Organizations ─────────────────────────────────── -->
+      <section class="content-section" aria-labelledby="orgs-heading">
+        <h2 id="orgs-heading" class="section-heading">Support Organizations</h2>
 
-      <section class="resource-section">
-        <div class="resource-card">
-          <h3><a href="https://www.mutualsupportforhd.com/" target="_blank" rel="noopener noreferrer">Mutual Support for HD</a></h3>
-          <p>A platform that offers virtual support groups and resources for individuals dealing with various mental health challenges, including hoarding disorder (HD). The website provides access to online communities where people can connect in a safe and supportive environment, share experiences, and find encouragement. Its virtual groups often focus on specific topics, helping members work together to address challenges and improve their mental health.</p>
-        </div>
-        <div class="resource-card">
-          <h3><a href="https://www.centerforhoarding.org/" target="_blank" rel="noopener noreferrer">Center for Hoarding and Cluttering</a></h3>
-          <p>An organization dedicated to supporting individuals impacted by hoarding disorder. It offers resources, education, and advocacy to address the challenges associated with hoarding behaviors. CHC provides services such as support groups, training, and consultations for individuals, families, and professionals, aiming to foster understanding and promote effective strategies for managing hoarding and improving overall well-being.</p>
-        </div>
-        <div class="resource-card">
-          <h3><a href="https://www.challengingdisorganization.org/" target="_blank" rel="noopener noreferrer">Institute for Challenging Disorganization</a></h3>
-          <p>A nonprofit organization dedicated to education, research, and strategies for addressing chronic disorganization, including hoarding disorder. It offers resources for individuals, families, and professionals, including training programs, publications, and a robust support network. The ICD aims to empower people to create sustainable organizational solutions and improve their quality of life while raising awareness about the challenges of disorganization and its related conditions.</p>
-        </div>
-        <div class="resource-card">
-          <h3><a href="https://hoarding.iocdf.org/" target="_blank" rel="noopener noreferrer">International OCD Foundation</a></h3>
-          <p>Offers a dedicated resource center focused on hoarding disorder. This platform provides comprehensive information about the condition, including diagnostic criteria, treatment options, and support resources for individuals, families, and professionals. It aims to raise awareness and understanding of hoarding disorder, promoting effective interventions and support strategies.</p>
-        </div>
-        <div class="resource-card">
-          <h3><a href="https://www.wghoardingresponse.com/" target="_blank" rel="noopener noreferrer">Wellington-Guelph Hoarding Response</a></h3>
-          <p>Offers comprehensive resources and support for individuals dealing with hoarding behaviors, their families, and service providers. It emphasizes harm reduction, safety, and person-centered care. WGHR provides tools like risk assessment scales, educational workshops, and e-learning modules tailored to address hoarding challenges. Their services include free community presentations, annual workshops with expert speakers, and collaboration with local agencies to create multidisciplinary support teams.</p>
-        </div>
-        <div class="resource-card">
-          <h3><a href="https://www.centerforhoarding.org/uniform-inspection-checklist/" target="_blank" rel="noopener noreferrer">Center for Hoarding and Cluttering – Uniform Inspection Checklist</a></h3>
-          <p>The Center for Hoarding and Cluttering offers a comprehensive inspection tool called the Uniform Inspection Checklist (UIC), designed to assess and track safety and sanitation in environments affected by hoarding. It emphasizes a harm-reduction approach and aims to support individuals, families, and professionals in addressing both physical and psychological aspects of hoarding. The checklist is based on a variety of standards, including housing codes, fire safety, and health guidelines, and provides measurable progress markers to guide intervention.</p>
+        <div class="card-stack">
+
+          <article class="resource-card">
+            <h3 class="card-title">
+              <a href="https://www.mutualsupportforhd.com/" target="_blank" rel="noopener noreferrer">Mutual Support for HD</a>
+            </h3>
+            <p>A platform that offers virtual support groups and resources for individuals dealing with various mental health challenges, including hoarding disorder (HD). The website provides access to online communities where people can connect in a safe and supportive environment, share experiences, and find encouragement. Its virtual groups often focus on specific topics, helping members work together to address challenges and improve their mental health.</p>
+          </article>
+
+          <article class="resource-card">
+            <h3 class="card-title">
+              <a href="https://www.centerforhoarding.org/" target="_blank" rel="noopener noreferrer">Center for Hoarding and Cluttering</a>
+            </h3>
+            <p>An organization dedicated to supporting individuals impacted by hoarding disorder. It offers resources, education, and advocacy to address the challenges associated with hoarding behaviors. CHC provides services such as support groups, training, and consultations for individuals, families, and professionals, aiming to foster understanding and promote effective strategies for managing hoarding and improving overall well-being.</p>
+          </article>
+
+          <article class="resource-card">
+            <h3 class="card-title">
+              <a href="https://www.challengingdisorganization.org/" target="_blank" rel="noopener noreferrer">Institute for Challenging Disorganization</a>
+            </h3>
+            <p>A nonprofit organization dedicated to education, research, and strategies for addressing chronic disorganization, including hoarding disorder. It offers resources for individuals, families, and professionals, including training programs, publications, and a robust support network. The ICD aims to empower people to create sustainable organizational solutions and improve their quality of life while raising awareness about the challenges of disorganization and its related conditions.</p>
+          </article>
+
+          <article class="resource-card">
+            <h3 class="card-title">
+              <a href="https://hoarding.iocdf.org/" target="_blank" rel="noopener noreferrer">International OCD Foundation</a>
+            </h3>
+            <p>Offers a dedicated resource center focused on hoarding disorder. This platform provides comprehensive information about the condition, including diagnostic criteria, treatment options, and support resources for individuals, families, and professionals. It aims to raise awareness and understanding of hoarding disorder, promoting effective interventions and support strategies.</p>
+          </article>
+
+          <article class="resource-card">
+            <h3 class="card-title">
+              <a href="https://www.wghoardingresponse.com/" target="_blank" rel="noopener noreferrer">Wellington-Guelph Hoarding Response</a>
+            </h3>
+            <p>Offers comprehensive resources and support for individuals dealing with hoarding behaviors, their families, and service providers. It emphasizes harm reduction, safety, and person-centered care. WGHR provides tools like risk assessment scales, educational workshops, and e-learning modules tailored to address hoarding challenges. Their services include free community presentations, annual workshops with expert speakers, and collaboration with local agencies to create multidisciplinary support teams.</p>
+          </article>
+
+          <article class="resource-card">
+            <h3 class="card-title">
+              <a href="https://www.centerforhoarding.org/uniform-inspection-checklist/" target="_blank" rel="noopener noreferrer">Center for Hoarding and Cluttering – Uniform Inspection Checklist</a>
+            </h3>
+            <p>The Center for Hoarding and Cluttering offers a comprehensive inspection tool called the Uniform Inspection Checklist (UIC), designed to assess and track safety and sanitation in environments affected by hoarding. It emphasizes a harm-reduction approach and aims to support individuals, families, and professionals in addressing both physical and psychological aspects of hoarding. The checklist is based on a variety of standards, including housing codes, fire safety, and health guidelines, and provides measurable progress markers to guide intervention.</p>
+          </article>
+
         </div>
       </section>
 
-      <section class="tools-section">
-        <div class="resource-card">
-          <h3><a href="https://www.challengingdisorganization.org/content/icd-clutter-hoarding-scale" target="_blank" rel="noopener noreferrer">The Institute for Challenging Disorganization – The ICD Clutter-Hoarding Scale</a></h3>
-          <p><a href="https://www.challengingdisorganization.org/content/icd-clutter-hoarding-scale" target="_blank" rel="noopener noreferrer">Quick Reference Guide</a></p>
-          <p><a href="https://www.challengingdisorganization.org/content/icd-quality-of-life-scale" target="_blank" rel="noopener noreferrer">The ICD Quality of Life Scale</a></p>
-          <p>The Clutter–Hoarding Scale® by the Institute for Challenging Disorganization (ICD) provides a detailed framework for assessing household clutter and hoarding. It uses five levels of assessment, ranging from Level I (low) to Level V (severe).</p>
-          <ul>
-            <li><strong>Level I (Green – Low):</strong> Standard household, no significant issues.</li>
-            <li><strong>Level II (Blue – Guarded):</strong> A major exit is blocked, some systems not functioning properly.</li>
-            <li><strong>Level III (Yellow – Elevated):</strong> Clutter significantly obstructs household functions.</li>
-            <li><strong>Level IV (Orange – High):</strong> More severe clutter and potential structural damage.</li>
-            <li><strong>Level V (Red – Severe):</strong> Extreme hoarding, health and safety at risk.</li>
-          </ul>
-        </div>
-        <div class="resource-card">
-          <h3><a href="https://hoarding.iocdf.org/for-individuals/clutter-image-rating/" target="_blank" rel="noopener noreferrer">The International OCD Foundation – Clutter Image Rating Scale</a></h3>
-          <p>A visual scale used to assess the degree of clutter in a household. It helps clinicians and individuals gauge the severity of clutter by comparing photographs of different living spaces at various stages of clutter, ranging from minimal clutter (Level 1) to severe hoarding (Level 9).</p>
-        </div>
-        <div class="resource-card">
-          <h3><a href="https://www.wghoardingresponse.com/10-steps" target="_blank" rel="noopener noreferrer">Wellington-Guelph 10 Steps to a Safer, Healthier and More Comfortable Home</a></h3>
-          <p>The Hoarding Response Checklist from the West Greater Toronto Hoarding Response is a tool used to assess and guide intervention for hoarding situations. It provides structured guidelines to ensure that all critical factors are considered in the assessment, from structural issues to sanitation, safety, and health.</p>
-        </div>
-        <div class="resource-card">
-          <h3><a href="https://www.childrenofhoarders.com/" target="_blank" rel="noopener noreferrer">Children of Hoarders</a></h3>
-          <p>Children of Hoarders (COH) is a supportive online community and resource hub dedicated to individuals who grew up in hoarding environments. The website provides education, resources, and connections to help users better understand hoarding disorder and navigate its emotional and practical challenges. With forums, articles, and shared stories, COH fosters a space for healing, advocacy, and mutual support.</p>
+      <!-- ── Tools & Assessment Scales ─────────────────────────────── -->
+      <section class="content-section" aria-labelledby="tools-heading">
+        <h2 id="tools-heading" class="section-heading">Tools &amp; Assessment Scales</h2>
+
+        <div class="card-stack">
+
+          <!-- ICD Clutter-Hoarding Scale — with color-coded levels -->
+          <article class="resource-card">
+            <h3 class="card-title">
+              <a href="https://www.challengingdisorganization.org/content/icd-clutter-hoarding-scale" target="_blank" rel="noopener noreferrer">The Institute for Challenging Disorganization – The ICD Clutter-Hoarding Scale</a>
+            </h3>
+            <nav class="scale-links" aria-label="ICD Scale supplemental resources">
+              <a href="https://www.challengingdisorganization.org/content/icd-clutter-hoarding-scale" target="_blank" rel="noopener noreferrer">Quick Reference Guide</a>
+              <span aria-hidden="true">·</span>
+              <a href="https://www.challengingdisorganization.org/content/icd-quality-of-life-scale" target="_blank" rel="noopener noreferrer">The ICD Quality of Life Scale</a>
+            </nav>
+            <p>The Clutter–Hoarding Scale® by the Institute for Challenging Disorganization (ICD) provides a detailed framework for assessing household clutter and hoarding. It uses five levels of assessment, ranging from Level I (low) to Level V (severe).</p>
+            <ul class="level-list" aria-label="ICD Clutter-Hoarding Scale levels">
+              <li class="level level-green">
+                <strong>Level I (Green – Low):</strong> Standard household, no significant issues.
+              </li>
+              <li class="level level-blue">
+                <strong>Level II (Blue – Guarded):</strong> A major exit is blocked, some systems not functioning properly.
+              </li>
+              <li class="level level-yellow">
+                <strong>Level III (Yellow – Elevated):</strong> Clutter significantly obstructs household functions.
+              </li>
+              <li class="level level-orange">
+                <strong>Level IV (Orange – High):</strong> More severe clutter and potential structural damage.
+              </li>
+              <li class="level level-red">
+                <strong>Level V (Red – Severe):</strong> Extreme hoarding, health and safety at risk.
+              </li>
+            </ul>
+          </article>
+
+          <article class="resource-card">
+            <h3 class="card-title">
+              <a href="https://hoarding.iocdf.org/for-individuals/clutter-image-rating/" target="_blank" rel="noopener noreferrer">The International OCD Foundation – Clutter Image Rating Scale</a>
+            </h3>
+            <p>A visual scale used to assess the degree of clutter in a household. It helps clinicians and individuals gauge the severity of clutter by comparing photographs of different living spaces at various stages of clutter, ranging from minimal clutter (Level 1) to severe hoarding (Level 9).</p>
+          </article>
+
+          <article class="resource-card">
+            <h3 class="card-title">
+              <a href="https://www.wghoardingresponse.com/10-steps" target="_blank" rel="noopener noreferrer">Wellington-Guelph 10 Steps to a Safer, Healthier and More Comfortable Home</a>
+            </h3>
+            <p>The Hoarding Response Checklist from the West Greater Toronto Hoarding Response is a tool used to assess and guide intervention for hoarding situations. It provides structured guidelines to ensure that all critical factors are considered in the assessment, from structural issues to sanitation, safety, and health.</p>
+          </article>
+
+          <!-- Children of Hoarders — callout card for family members -->
+          <article class="resource-card callout-card" aria-label="Featured resource: Children of Hoarders">
+            <p class="callout-label">For Family Members</p>
+            <h3 class="card-title">
+              <a href="https://www.childrenofhoarders.com/" target="_blank" rel="noopener noreferrer">Children of Hoarders</a>
+            </h3>
+            <p>Children of Hoarders (COH) is a supportive online community and resource hub dedicated to individuals who grew up in hoarding environments. The website provides education, resources, and connections to help users better understand hoarding disorder and navigate its emotional and practical challenges. With forums, articles, and shared stories, COH fosters a space for healing, advocacy, and mutual support.</p>
+          </article>
+
         </div>
       </section>
 
-      <section class="books-section">
-        <div class="resource-card">
-          <h3>Family As Motivators</h3>
-          <p>Gregory S. Chasson, Jenna Ewing, Ashley A. Carpenter, and Brittany Gibby — Towson University – <a href="/contact/">Contact Us to Request a PDF for sharing</a></p>
+      <!-- ── Family As Motivators ───────────────────────────────────── -->
+      <section class="content-section" aria-labelledby="fam-heading">
+        <h2 id="fam-heading" class="section-heading">Family As Motivators</h2>
+
+        <div class="featured-card">
+          <div class="featured-card__body">
+            <h3 class="card-title">Family As Motivators</h3>
+            <p class="featured-authors">Gregory S. Chasson, Jenna Ewing, Ashley A. Carpenter, and Brittany Gibby — Towson University</p>
+            <p>A research-based resource that helps family members and loved ones play a supportive and motivating role in the recovery journey of someone with hoarding disorder.</p>
+            <a href="/contact/" class="btn btn-secondary">Contact Us to Request a PDF for sharing</a>
+          </div>
         </div>
       </section>
 
-      <section class="reading-section">
-        <h2>Recommended Reading</h2>
-        <ul>
-          <li>Buried in Treasures, 2nd Edition. David F Tolin, Randy O. Frost, and Gail Steketee, 2014</li>
-          <li>Stuff: Compulsive Hoarding and the Meaning of Things — Randy O Frost and Gail Steketee, 2011</li>
-          <li>Making Space Clutter Free — Tracy McCubbin, 2019</li>
-          <li>Digging Out: Helping Your Loved One Manage Clutter, Hoarding and Compulsive Acquiring — Michael A. Tompkins, Tamara Hartl, Randy O. Frost (forward) and Gail Steketee (forward)</li>
-        </ul>
-      </section>
+      <!-- ── Recommended Reading ────────────────────────────────────── -->
+      <section class="content-section" aria-labelledby="reading-heading">
+        <h2 id="reading-heading" class="section-heading">Recommended Reading</h2>
 
-      <section class="elder-section">
-        <div class="resource-card">
-          <h3><a href="https://elderjusticemn.org/" target="_blank" rel="noopener noreferrer">MN Elder Justice</a></h3>
-          <p>Providing support and resources older adults and their loved ones.</p>
-          <ul>
-            <li><a href="https://elderjusticemn.org/our-services/victim-services/" target="_blank" rel="noopener noreferrer">Direct Services</a></li>
-            <li><a href="https://elderjusticemn.org/webinars/" target="_blank" rel="noopener noreferrer">Upcoming webinars</a></li>
-            <li><a href="https://elderjusticemn.org/resources/video-library/" target="_blank" rel="noopener noreferrer">Video library</a></li>
-          </ul>
+        <div class="card-stack">
+
+          <article class="book-card">
+            <p class="book-title">Buried in Treasures, 2nd Edition</p>
+            <p class="book-meta">David F Tolin, Randy O. Frost, and Gail Steketee, 2014</p>
+          </article>
+
+          <article class="book-card">
+            <p class="book-title">Stuff: Compulsive Hoarding and the Meaning of Things</p>
+            <p class="book-meta">Randy O Frost and Gail Steketee, 2011</p>
+          </article>
+
+          <article class="book-card">
+            <p class="book-title">Making Space Clutter Free</p>
+            <p class="book-meta">Tracy McCubbin, 2019</p>
+          </article>
+
+          <article class="book-card">
+            <p class="book-title">Digging Out: Helping Your Loved One Manage Clutter, Hoarding and Compulsive Acquiring</p>
+            <p class="book-meta">Michael A. Tompkins, Tamara Hartl, Randy O. Frost (forward) and Gail Steketee (forward)</p>
+          </article>
+
         </div>
       </section>
+
+      <!-- ── Elder Resources ─────────────────────────────────────────── -->
+      <section class="content-section" aria-labelledby="elder-heading">
+        <h2 id="elder-heading" class="section-heading">Elder Resources</h2>
+
+        <div class="card-stack">
+          <article class="resource-card">
+            <h3 class="card-title">
+              <a href="https://elderjusticemn.org/" target="_blank" rel="noopener noreferrer">MN Elder Justice</a>
+            </h3>
+            <p>Providing support and resources older adults and their loved ones.</p>
+            <ul class="link-list" aria-label="MN Elder Justice resources">
+              <li>
+                <a href="https://elderjusticemn.org/our-services/victim-services/" target="_blank" rel="noopener noreferrer">
+                  <span aria-hidden="true">→</span> Direct Services
+                </a>
+              </li>
+              <li>
+                <a href="https://elderjusticemn.org/webinars/" target="_blank" rel="noopener noreferrer">
+                  <span aria-hidden="true">→</span> Upcoming webinars
+                </a>
+              </li>
+              <li>
+                <a href="https://elderjusticemn.org/resources/video-library/" target="_blank" rel="noopener noreferrer">
+                  <span aria-hidden="true">→</span> Video library
+                </a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
     </div>
   </div>
 
 </BaseLayout>
 
 <style>
+/* ── Hero ─────────────────────────────────────────────────────────── */
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url('/images/Friend-or-Family.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-12) var(--space-6);
+}
+.hero-inner {
+  text-align: center;
+}
+.hero-title {
+  font-size: var(--font-size-3xl);
+  color: #ffffff;
+  margin-bottom: var(--space-4);
+}
+.hero-subtitle {
+  font-size: var(--font-size-xl);
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+}
+/* ── Utility ───────────────────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Page title ────────────────────────────────────────────────────── */
+.page-title {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+  line-height: 1.2;
+}
+
+/* ── Banner image ──────────────────────────────────────────────────── */
 .banner-img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 12px;
   margin-bottom: var(--space-8);
 }
-.intro {
+
+/* ── Intro card — green top border ────────────────────────────────── */
+.intro-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.intro-card p {
   font-size: var(--font-size-lg);
-  margin-bottom: var(--space-8);
+  margin: 0;
+  line-height: 1.7;
 }
-.resource-section,
-.tools-section,
-.books-section,
-.elder-section {
+
+/* ── Section wrapper ───────────────────────────────────────────────── */
+.content-section {
+  margin-bottom: var(--space-12);
+}
+
+.section-heading {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-3);
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* ── Card stack (vertical, single-column) ──────────────────────────── */
+.card-stack {
   display: flex;
   flex-direction: column;
   gap: var(--space-6);
-  margin-bottom: var(--space-12);
 }
+
+/* ── Resource card ─────────────────────────────────────────────────── */
 .resource-card {
-  background: var(--color-bg-light);
-  border-left: 4px solid var(--color-primary);
-  border-radius: 0 8px 8px 0;
-  padding: var(--space-6);
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: var(--space-8);
 }
-.resource-card h3 {
-  margin-bottom: var(--space-2);
+
+.resource-card p {
+  font-size: var(--font-size-lg);
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.7;
+}
+
+.resource-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Card title (h3) ───────────────────────────────────────────────── */
+.card-title {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-4);
+  line-height: 1.3;
+}
+
+.card-title a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.card-title a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* ── ICD scale supplemental links ─────────────────────────────────── */
+.scale-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  align-items: center;
+  margin-bottom: var(--space-4);
   font-size: var(--font-size-lg);
 }
-.resource-card ul {
-  margin: var(--space-3) 0;
+
+.scale-links span {
+  color: var(--color-border);
 }
-.reading-section {
-  margin-bottom: var(--space-12);
+
+/* ── ICD level list ────────────────────────────────────────────────── */
+.level-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
-.reading-section h2 {
+
+.level {
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0 8px 8px 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.5;
+}
+
+/* Color-coded levels matching the named colors */
+.level-green  { border-left: 5px solid #2e7d32; background: #f1f8f1; }
+.level-blue   { border-left: 5px solid #1565c0; background: #f0f4fb; }
+.level-yellow { border-left: 5px solid #f9a825; background: #fffdf0; }
+.level-orange { border-left: 5px solid #e65100; background: #fff5ee; }
+.level-red    { border-left: 5px solid #c62828; background: #fff0f0; }
+
+/* ── Callout card (Children of Hoarders) ───────────────────────────── */
+.callout-card {
+  position: relative;
+}
+
+.callout-label {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: var(--space-1) var(--space-3);
+  border-radius: 4px;
   margin-bottom: var(--space-4);
+}
+
+/* ── Featured card (Family As Motivators) ──────────────────────────── */
+.featured-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: var(--space-8);
+}
+
+.featured-card__body p {
+  font-size: var(--font-size-lg);
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.7;
+}
+
+.featured-authors {
+  color: var(--color-secondary);
+  font-size: var(--font-size-lg);
+}
+
+/* ── Book cards ────────────────────────────────────────────────────── */
+.book-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: var(--space-6) var(--space-8);
+}
+
+.book-title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.book-meta {
+  font-size: var(--font-size-lg);
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+/* ── Elder Justice link list ───────────────────────────────────────── */
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-4) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.link-list li a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.link-list li a:hover {
+  color: var(--color-primary-dark);
+}
+
+/* ── Mobile responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .section-heading {
+    font-size: var(--font-size-xl);
+  }
+
+  .intro-card,
+  .resource-card,
+  .featured-card,
+  .book-card {
+    padding: var(--space-6);
+  }
+
+  .scale-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .scale-links span {
+    display: none;
+  }
 }
 </style>

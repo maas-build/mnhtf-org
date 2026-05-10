@@ -3,12 +3,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Events" description="Find events for the Minnesota Hoarding Task Force, including public education and business meetings.">
 
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner container">
+      <h1 class="hero-title">Events &amp; Media</h1>
+      <p class="hero-subtitle">Connect with our community through education, networking, and outreach events.</p>
+    </div>
+  </div>
+
   <div class="page-content">
     <div class="container">
 
-      <section class="meetings">
-        <h3>MNHTF Public Education &amp; Business Meetings</h3>
-        <ul>
+      <!-- Section 1: Meetings -->
+      <section class="section-card meetings" aria-labelledby="meetings-heading">
+        <h2 id="meetings-heading" class="card-heading">MNHTF Public Education &amp; Business Meetings</h2>
+        <ul class="meetings-list">
           <li>This is a combined meeting, with the educational part earlier in the meeting.</li>
           <li>Open to the public – you are welcome to visit one time or multiple times</li>
           <li>Location varies throughout the metro area – please check carefully where the next meeting will be held</li>
@@ -16,136 +25,361 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <li>To attend virtually please email ahead at least one full day so an invitation can be emailed to you</li>
           <li>Come to learn, network, and see what we are working on.</li>
         </ul>
-        <p>Please email us at: <a href="mailto:info@mnhtf.org">info@mnhtf.org</a></p>
-      </section>
-
-      <section class="event-photos">
-        <div class="photos-grid">
-          <img src="/images/Lets-Talk-About-Hoarding-Booth.jpg" alt="Let's Talk About Hoarding Booth" />
-          <img src="/images/MN-HTF.jpg" alt="Minnesota Hoarding Task Force" />
+        <div class="meetings-cta">
+          <p class="meetings-cta-label">Questions or want to attend virtually?</p>
+          <a href="mailto:info@mnhtf.org" class="btn btn-primary">Email Us at info@mnhtf.org</a>
         </div>
       </section>
 
-      <section class="past-events">
-        <h4>Past Events Of The Minnesota Hoarding Task Force</h4>
-        <p>The MN Hoarding Task Force has led or participated in a variety of events over the last several years. We have many volunteers who have generously donated their time and skills to community events including safety days, educational forums for community members and professional groups.</p>
-        <p>We have collaborated with groups like NAMI (National Alliance on Mental Illness), The Elder Justice Center, first responders, Cities and Counties and more.</p>
-        <p>We have also enjoyed a fundraising-shredding event in our partnership with Shred Right for Good, Summit Investment Advisors, Professional Rehabilitation Consultants and Junk Masters.</p>
-        <p>We look forward to many more ways to connect with and serve this community and welcome your ideas and partnership in the coming months and years.</p>
+      <!-- Section 2: Event Photos -->
+      <section class="section-card event-photos" aria-label="Event photos">
+        <h2 class="card-heading">Community Events &amp; Outreach</h2>
+        <div class="photos-grid">
+          <figure class="photo-figure">
+            <img
+              src="/images/Lets-Talk-About-Hoarding-Booth.jpg"
+              alt="Let's Talk About Hoarding Booth at a community event"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="photo-figure">
+            <img
+              src="/images/MN-HTF.jpg"
+              alt="Minnesota Hoarding Task Force members"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="photo-figure">
+            <img
+              src="/images/NAMI-Walks.jpg"
+              alt="MNHTF participating in NAMI Walks"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="photo-figure">
+            <img
+              src="/images/Group-St-Louis-Park-event.jpg"
+              alt="Group photo at St. Louis Park event"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="photo-figure">
+            <img
+              src="/images/Shred-Right.jpg"
+              alt="Fundraising shredding event with Shred Right"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="photo-figure">
+            <img
+              src="/images/Sr-expo-Ramsey.jpg"
+              alt="Senior Expo in Ramsey"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="photo-figure">
+            <img
+              src="/images/Handing-Over-a-Check.jpg"
+              alt="MNHTF receiving a donation check"
+              loading="lazy"
+            />
+          </figure>
+        </div>
       </section>
 
-      <section class="media">
-        <h2>IN THE MEDIA</h2>
+      <!-- Section 3: Past Events -->
+      <section class="section-card past-events" aria-labelledby="past-events-heading">
+        <h2 id="past-events-heading" class="card-heading">Past Events of the Minnesota Hoarding Task Force</h2>
+        <div class="past-events-body">
+          <p>The MN Hoarding Task Force has led or participated in a variety of events over the last several years. We have many volunteers who have generously donated their time and skills to community events including safety days, educational forums for community members and professional groups.</p>
+          <p>We have collaborated with groups like NAMI (National Alliance on Mental Illness), The Elder Justice Center, first responders, Cities and Counties and more.</p>
+          <p>We have also enjoyed a fundraising-shredding event in our partnership with Shred Right for Good, Summit Investment Advisors, Professional Rehabilitation Consultants and Junk Masters.</p>
+          <p>We look forward to many more ways to connect with and serve this community and welcome your ideas and partnership in the coming months and years.</p>
+        </div>
+      </section>
 
-        <div class="media-item media-item--video-left">
+      <!-- Section 4: In the Media -->
+      <section class="media-section" aria-labelledby="media-heading">
+        <h2 id="media-heading" class="section-heading">In the Media</h2>
+
+        <!-- Video 1 -->
+        <article class="section-card video-card" aria-labelledby="video-1-title">
+          <h3 id="video-1-title" class="video-title">What does it mean to be a hoarder? WCCO</h3>
+          <p class="video-description">What does it mean to be a hoarder? Hear Jayme Kalbo and Katie Fetterly discuss the definition with Associates at WCCO!</p>
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/VVU0-z4d-gE"
               title="What does it mean to be a hoarder? WCCO"
-              width="560"
-              height="315"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               loading="lazy"
             ></iframe>
           </div>
-          <div class="media-text">
-            <p>What does it mean to be a hoarder? Hear Jayme Kalbo and Katie Fetterly discuss the definition with Associates at WCCO!</p>
-          </div>
-        </div>
+        </article>
 
-        <div class="media-item media-item--video-right">
-          <div class="media-text">
-            <p>Why does hoarding happen? Watch Wade Crandall, Clinical Site Director at Nystrom &amp; Associates on WCCO, to find out!</p>
-          </div>
+        <!-- Video 2 -->
+        <article class="section-card video-card" aria-labelledby="video-2-title">
+          <h3 id="video-2-title" class="video-title">Breaking down the psychology behind hoarding – WCCO</h3>
+          <p class="video-description">Why does hoarding happen? Watch Wade Crandall, Clinical Site Director at Nystrom &amp; Associates on WCCO, to find out!</p>
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/pYOiwiUL0wU"
               title="Breaking down the psychology behind hoarding - WCCO"
-              width="560"
-              height="315"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               loading="lazy"
             ></iframe>
           </div>
-        </div>
+        </article>
 
-        <div class="media-item media-item--video-left">
+        <!-- Video 3 -->
+        <article class="section-card video-card" aria-labelledby="video-3-title">
+          <h3 id="video-3-title" class="video-title">Getting a handle on hoarding – KMSP FOX 9</h3>
+          <p class="video-description">Thank you Minnesota Hoarding Task Force Members Jayme Kolbo and Louise Kurzeka for sharing information with the community and Alix Kendall on Channel 9. Check it out!</p>
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/1QX4fMb6wpo"
               title="Getting a handle on hoarding - KMSP FOX 9"
-              width="560"
-              height="315"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               loading="lazy"
             ></iframe>
           </div>
-          <div class="media-text">
-            <p>Thank you Minnesota Hoarding Task Force Members Jayme Kolbo and Louise Kurzeka for sharing information with the community and Alix Kendall on Channel 9. Check it out!</p>
-          </div>
-        </div>
+        </article>
+
       </section>
+
     </div>
   </div>
 
 </BaseLayout>
 
 <style>
-.meetings, .past-events, .media {
-  margin-bottom: var(--space-12);
+/* ── Hero ── */
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url('/images/Events.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-12) var(--space-6);
 }
-.event-photos {
-  margin-bottom: var(--space-12);
+
+.hero-inner {
+  text-align: center;
 }
+
+.hero-title {
+  font-size: var(--font-size-3xl);
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-xl);
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Shared card shell ── */
+.section-card {
+  background: var(--color-white);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: var(--space-12);
+  margin-bottom: var(--space-8);
+}
+
+/* ── Card heading (h2 inside cards) ── */
+.card-heading {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: var(--space-6);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ── Section heading (h2 outside cards, e.g. "In the Media") ── */
+.section-heading {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: var(--space-6);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ── Meetings ── */
+.meetings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-8) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.meetings-list li {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  padding-left: var(--space-6);
+  position: relative;
+  line-height: 1.6;
+}
+
+.meetings-list li::before {
+  content: "✓";
+  color: var(--color-accent);
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+.meetings-cta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.meetings-cta-label {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ── Event photos ── */
 .photos-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.photo-figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.photo-figure img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  transition: transform var(--transition);
+}
+
+.photo-figure img:hover {
+  transform: scale(1.02);
+}
+
+/* ── Past events ── */
+.past-events-body {
+  display: flex;
+  flex-direction: column;
   gap: var(--space-4);
 }
-.photos-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-}
-.media-item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-8);
-  align-items: center;
-  margin-bottom: var(--space-12);
-}
-.media-text {
+
+.past-events-body p {
   font-size: var(--font-size-lg);
+  color: var(--color-text);
+  line-height: 1.7;
+  margin: 0;
 }
+
+/* ── Media section wrapper ── */
+.media-section {
+  margin-bottom: var(--space-8);
+}
+
+/* ── Video cards ── */
+.video-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.video-title {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.video-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── 16:9 responsive iframe ── */
 .video-embed {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   overflow: hidden;
+  border-radius: 10px;
+  background: var(--color-bg-light);
 }
+
 .video-embed iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
+  border-radius: 10px;
 }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .photos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .card-heading,
+  .section-heading {
+    font-size: var(--font-size-2xl);
+  }
+
+  .section-card {
+    padding: var(--space-8) var(--space-6);
+  }
+
   .photos-grid {
     grid-template-columns: 1fr;
   }
-  .media-item {
-    grid-template-columns: 1fr;
+
+  .meetings-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
   }
-  .media-item--video-right .media-text {
-    order: 2;
-  }
-  .media-item--video-right .video-embed {
-    order: 1;
+
+  .video-title {
+    font-size: var(--font-size-lg);
   }
 }
 </style>

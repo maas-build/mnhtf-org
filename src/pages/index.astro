@@ -128,28 +128,90 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <section class="email-signup section bg-light">
-    <div class="container email-signup-grid">
-      <div class="email-signup-text">
-        <img
-          src="/images/Screenshot-2024-11-15.png"
-          alt="MNHTF community support"
-          class="email-side-photo"
-          width="550"
-          height="462"
-        />
-      </div>
-      <div class="email-signup-form">
+  <section class="email-signup-section">
+    <div class="email-signup-inner">
+      <div class="email-signup-card">
+        <div class="email-signup-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white">
+            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+          </svg>
+        </div>
         <h2>Join the Email List</h2>
-        <p>News, Invites to our Public Education &amp; Business Meetings and More, right to your Inbox!</p>
+        <p>News, invites to our Public Education &amp; Business Meetings, and more — right to your inbox.</p>
+        <form
+          class="email-signup-form"
+          action="https://buttondown.com/api/emails/embed-subscribe/mnhtf"
+          method="post"
+        >
+          <input type="hidden" name="embed" value="1" />
+          <div class="email-signup-row">
+            <input
+              class="email-signup-input"
+              type="email"
+              name="email"
+              required
+              placeholder="Your email address"
+              aria-label="Email address"
+            />
+            <button class="email-signup-btn" type="submit">Subscribe</button>
+          </div>
+          <p class="email-signup-privacy">No spam. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="facebook-section">
+    <div class="facebook-inner">
+      <div class="facebook-embed">
         <iframe
-          src="https://buttondown.com/mnhtf/embed"
-          title="Subscribe to MNHTF email list"
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fmnhtf&tabs=timeline&height=520&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&hide_cta=false"
           width="100%"
-          height="160"
-          style="border:none;"
+          height="520"
+          style="border:none;overflow:hidden;"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen={true}
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+          title="MNHTF Facebook Page"
           loading="lazy"
         ></iframe>
+      </div>
+      <div class="facebook-cta">
+        <svg class="facebook-wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+        <h2>Stay Connected</h2>
+        <p>Follow the Minnesota Hoarding Task Force on Facebook for news, upcoming events, community resources, and more.</p>
+        <ul class="facebook-features" aria-label="What you'll find on our Facebook page">
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+            Event announcements &amp; reminders
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+            Hoarding awareness &amp; education
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+            Community resources &amp; support
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+            Task force updates &amp; news
+          </li>
+        </ul>
+        <a
+          href="https://www.facebook.com/mnhtf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="facebook-follow-btn"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Follow on Facebook
+        </a>
+        <p class="facebook-follower-count">Join 647+ followers in our community</p>
       </div>
     </div>
   </section>
@@ -255,22 +317,224 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   text-align: center;
   margin-top: var(--space-6);
 }
-.email-signup-grid {
+.email-signup-section {
+  width: 100%;
+  background-image: url('/images/Email-Background.png');
+  background-size: cover;
+  background-position: center;
+  padding: var(--space-16) var(--space-4);
+}
+.email-signup-inner {
   display: flex;
-  gap: var(--space-8);
+  justify-content: center;
   align-items: center;
 }
-.email-signup-text {
+.email-signup-card {
+  background: var(--color-white);
+  border-radius: 20px;
+  padding: var(--space-12) var(--space-8);
+  width: 100%;
+  max-width: 560px;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.18);
+  text-align: center;
+}
+.email-signup-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+}
+.email-signup-icon svg {
+  width: 26px;
+  height: 26px;
+}
+.email-signup-card h2 {
+  color: var(--color-text-dark);
+  font-size: 1.75rem;
+  margin: 0 0 var(--space-3);
+}
+.email-signup-card > p {
+  margin: 0 0 var(--space-6);
+  font-size: var(--font-size-base);
+  color: var(--color-secondary);
+  line-height: 1.6;
+}
+.email-signup-row {
+  display: flex;
+  gap: var(--space-3);
+}
+.email-signup-input {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 12px var(--space-4);
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-white);
+  outline: none;
+  transition: border-color var(--transition);
+}
+.email-signup-input:focus {
+  border-color: var(--color-primary);
+}
+.email-signup-btn {
+  padding: 12px var(--space-6);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition);
+}
+.email-signup-btn:hover {
+  background: var(--color-primary-dark);
+}
+.email-signup-privacy {
+  margin: var(--space-3) 0 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-secondary);
+}
+@media (max-width: 600px) {
+  .email-signup-card {
+    padding: var(--space-8) var(--space-6);
+  }
+  .email-signup-row {
+    flex-direction: column;
+  }
+  .email-signup-btn {
+    width: 100%;
+  }
+}
+
+.facebook-section {
+  background: var(--color-bg-light);
+  padding: var(--space-12) var(--space-8);
+}
+.facebook-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-6);
+  background: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.08);
+}
+.facebook-embed {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 500px;
+}
+.facebook-embed iframe {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+.facebook-cta {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 12px;
+  padding: var(--space-8);
+}
+.facebook-wordmark {
+  width: 44px;
+  height: 44px;
+  fill: #fff;
+}
+.facebook-cta h2 {
+  color: #fff;
+  font-size: 1.75rem;
+  margin: 0;
+  line-height: 1.25;
+}
+.facebook-cta > p {
+  color: rgba(255,255,255,0.78);
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+.facebook-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.facebook-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: rgba(255,255,255,0.88);
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+.facebook-features li svg {
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
+  color: rgba(255,255,255,0.5);
 }
-.email-side-photo {
-  width: 550px;
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
+.facebook-follow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  background: #fff;
+  color: #040CDE;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px var(--space-6);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+  margin-top: var(--space-2);
 }
-.email-signup-form {
-  flex: 1;
+.facebook-follow-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: #040CDE;
+  flex-shrink: 0;
+  transition: fill 0.15s ease;
+}
+.facebook-follow-btn:hover {
+  background: rgba(255,255,255,0.88);
+}
+.facebook-follower-count {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.8125rem;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .facebook-inner {
+    flex-direction: column;
+    gap: var(--space-6);
+    padding: var(--space-6);
+  }
+  .facebook-embed {
+    width: 100%;
+  }
+  .facebook-cta {
+    flex: none;
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -280,9 +544,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .mission-side-photo {
     max-width: 100%;
     width: 100%;
-  }
-  .email-signup-grid {
-    flex-direction: column;
   }
 }
 </style>

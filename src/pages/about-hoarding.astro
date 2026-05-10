@@ -1,70 +1,189 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
-<BaseLayout title="About Hoarding" description="Hoarding Disorder (HD) is a mental health condition with roots in trauma and loss. Learn about HD, its symptoms, and how it differs from clutter.">
+<BaseLayout
+  title="About Hoarding"
+  description="Hoarding Disorder (HD) is a mental health condition with roots in trauma and loss. Learn about HD, its symptoms, and how it differs from clutter."
+>
 
-  <div class="page-content">
-    <div class="container">
-      <h1>About Hoarding</h1>
+  <!-- ===================== Hero ===================== -->
+  <section class="hero" aria-label="About Hoarding page hero">
+    <div class="hero-image-wrap">
+      <img
+        src="/images/About-Hoarding.png"
+        alt="A cluttered living space illustrating the impact of hoarding disorder"
+        width="2240"
+        height="800"
+        class="hero-img"
+      />
+      <div class="hero-overlay" aria-hidden="true"></div>
+    </div>
+    <div class="hero-title-wrap">
+      <div class="container">
+        <h1 class="hero-title">About Hoarding</h1>
+      </div>
+    </div>
+  </section>
 
-      <p>Hoarding Disorder (HD) is a mental health condition with roots in trauma and loss. HD affects an estimated 2–6% of people across the world. Based on Minnesota's population of 5.7 million (2021), this means roughly 285,000 Minnesotans could be living with the disorder.</p>
+  <!-- ===================== Main Content ===================== -->
+  <div class="page-bg">
+    <div class="page-content">
+      <div class="container">
 
-      <h2>Hoarding Disorder Presents As:</h2>
-      <ul>
-        <li>Persistent, excessive attachment to possessions regardless of their actual value.</li>
-        <li>Clinically significant distress and anxiety associated with parting with items.</li>
-        <li>Living spaces that cannot be used for their intended purpose.</li>
-        <li>The hoarding causes disruption of social, occupational (Activities of Daily Living) and other important areas of functioning such as maintaining safety for one's self and others.</li>
-        <li>The behavior cannot be better explained by another condition such as dementia, Traumatic Brain Injury (TBI) or Prader Willi.</li>
-      </ul>
-      <p>For some, Hoarding Disorder also includes: Excessive acquisition and/or poor or reduced insight.</p>
+        <!-- Intro -->
+        <p class="intro-text">
+          Hoarding Disorder (HD) is a mental health condition with roots in trauma and loss.
+        </p>
 
-      <h2>Similar Issues</h2>
-      <h3>Hoarding Behavior</h3>
-      <p>Struggling with clutter in the home can look similar to Hoarding Disorder, but without excessive attachment. Clutter is caused by complications with another illness such as depression, dementia, medical issues, anxiety, Obsessive Compulsive Disorder (OCD), Attention Deficit Hyperactivity Disorder (ADHD), Traumatic Brain Injury (TBI), or other conditions.</p>
-
-      <h3>Diogenes Syndrome / Squalor Syndrome</h3>
-      <p>Items lack a purpose for the person and the person is not emotionally attached to the items. The items are most often trash and the living spaces have sanitation issues. A mixture of HD and Diogenes is possible. Co-morbidity with another mental illness is likely.</p>
-
-      <h2>Severity</h2>
-      <p>The severity of hoarding can range from Mild to Severe. There are several resources and scales that can be used to measure the severity:</p>
-      <ul>
-        <li>Hoarding Rating Scale (HRS)</li>
-        <li>Institute for Challenging Disorganization Clutter Image Rating Scale</li>
-      </ul>
-
-      <h2>Hoarding Is Often Hidden</h2>
-      <p>Hoarding is often hidden from family, friends and neighbors, sometimes out of embarrassment or fear of being turned in to authorities. The items in the home may feel comforting to the owner. The clutter may even provide a sense of security. For many, the hoarded items can spread to other areas including yards, porches, automobiles, storage units and more.</p>
-
-      <h3>Common Experiences of People Who Hoard:</h3>
-      <ul>
-        <li>Isolation</li>
-        <li>Depression</li>
-        <li>Fear</li>
-        <li>Embarrassment</li>
-        <li>Fear of leaving home</li>
-        <li>Avoidance of spending time at home</li>
-        <li>Difficulty making decisions</li>
-        <li>Unprocessed trauma or loss</li>
-        <li>Emotional attachment to belongings</li>
-        <li>History of Hoarding Disorder or related behavior in the family</li>
-        <li>Anxiety</li>
-      </ul>
-
-      <p>There is much to learn about hoarding. No website can summarize the complexities of what a person experiences with Hoarding Disorder and Hoarding Behavior. We understand that some relationships become extremely complicated. If you are trying to help a person struggling with this behavior, please approach them with compassion and take care of your own mental health as you do.</p>
-
-      <div class="video-section">
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/iy7kcA3GC1Q"
-            title="MNHTF Guest Speaker Dakota County August 1, 2024"
-            width="560"
-            height="315"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+        <!-- Key Stats Callout -->
+        <div class="stats-callout" aria-label="Key statistics about hoarding disorder">
+          <div class="stat-item">
+            <span class="stat-number">2–6%</span>
+            <span class="stat-label">of people worldwide are affected by Hoarding Disorder</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number">~285,000</span>
+            <span class="stat-label">
+              Minnesotans could be living with the disorder<br />
+              <span class="stat-source">(Based on MN population of 5.7 million, 2021)</span>
+            </span>
+          </div>
         </div>
+
+        <!-- ===================== Section: Presents As ===================== -->
+        <section class="content-card" aria-labelledby="presents-as-heading">
+          <div class="card-accent" aria-hidden="true"></div>
+          <div class="card-body">
+            <h2 id="presents-as-heading">Hoarding Disorder Presents As:</h2>
+            <ul class="content-list">
+              <li>Persistent, excessive attachment to possessions regardless of their actual value.</li>
+              <li>Clinically significant distress and anxiety associated with parting with items.</li>
+              <li>Living spaces that cannot be used for their intended purpose.</li>
+              <li>
+                The hoarding causes disruption of social, occupational (Activities of Daily Living)
+                and other important areas of functioning such as maintaining safety for one's self
+                and others.
+              </li>
+              <li>
+                The behavior cannot be better explained by another condition such as dementia,
+                Traumatic Brain Injury (TBI) or Prader Willi.
+              </li>
+            </ul>
+            <p class="card-note">
+              For some, Hoarding Disorder also includes:
+              <strong>Excessive acquisition</strong> and/or <strong>poor or reduced insight</strong>.
+            </p>
+          </div>
+        </section>
+
+        <!-- ===================== Section: Similar Issues ===================== -->
+        <section class="content-card" aria-labelledby="similar-issues-heading">
+          <div class="card-accent" aria-hidden="true"></div>
+          <div class="card-body">
+            <h2 id="similar-issues-heading">Similar Issues</h2>
+            <p class="card-intro">
+              Clutter and related conditions can look similar to Hoarding Disorder but have
+              important distinctions.
+            </p>
+            <div class="similar-issues-stack">
+              <div class="issue-block">
+                <h3>Hoarding Behavior</h3>
+                <p>
+                  Struggling with clutter in the home can look similar to Hoarding Disorder, but
+                  without excessive attachment. Clutter is caused by complications with another
+                  illness such as depression, dementia, medical issues, anxiety, Obsessive
+                  Compulsive Disorder (OCD), Attention Deficit Hyperactivity Disorder (ADHD),
+                  Traumatic Brain Injury (TBI), or other conditions.
+                </p>
+              </div>
+              <div class="issue-block">
+                <h3>Diogenes Syndrome / Squalor Syndrome</h3>
+                <p>
+                  Items lack a purpose for the person and the person is not emotionally attached to
+                  the items. The items are most often trash and the living spaces have sanitation
+                  issues. A mixture of HD and Diogenes is possible. Co-morbidity with another
+                  mental illness is likely.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Section: Severity ===================== -->
+        <section class="content-card" aria-labelledby="severity-heading">
+          <div class="card-accent" aria-hidden="true"></div>
+          <div class="card-body">
+            <h2 id="severity-heading">Severity</h2>
+            <p>
+              The severity of hoarding can range from Mild to Severe. There are several resources
+              and scales that can be used to measure the severity:
+            </p>
+            <ul class="content-list">
+              <li>Hoarding Rating Scale (HRS)</li>
+              <li>Institute for Challenging Disorganization Clutter Image Rating Scale</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===================== Section: Hoarding Is Often Hidden ===================== -->
+        <section class="content-card" aria-labelledby="hidden-heading">
+          <div class="card-accent" aria-hidden="true"></div>
+          <div class="card-body">
+            <h2 id="hidden-heading">Hoarding Is Often Hidden</h2>
+            <p>
+              Hoarding is often hidden from family, friends and neighbors, sometimes out of
+              embarrassment or fear of being turned in to authorities. The items in the home may
+              feel comforting to the owner. The clutter may even provide a sense of security.
+              For many, the hoarded items can spread to other areas including yards, porches,
+              automobiles, storage units and more.
+            </p>
+
+            <h3 id="common-experiences-heading">Common Experiences of People Who Hoard:</h3>
+            <ul class="pill-list" aria-labelledby="common-experiences-heading" role="list">
+              <li class="pill">Isolation</li>
+              <li class="pill">Depression</li>
+              <li class="pill">Fear</li>
+              <li class="pill">Embarrassment</li>
+              <li class="pill">Fear of leaving home</li>
+              <li class="pill">Avoidance of spending time at home</li>
+              <li class="pill">Difficulty making decisions</li>
+              <li class="pill">Unprocessed trauma or loss</li>
+              <li class="pill">Emotional attachment to belongings</li>
+              <li class="pill">History of Hoarding Disorder or related behavior in the family</li>
+              <li class="pill">Anxiety</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ===================== Compassion Closing ===================== -->
+        <aside class="compassion-box" aria-label="A message of compassion">
+          <p>
+            There is much to learn about hoarding. No website can summarize the complexities of
+            what a person experiences with Hoarding Disorder and Hoarding Behavior. We understand
+            that some relationships become extremely complicated. If you are trying to help a person
+            struggling with this behavior, please approach them with <strong>compassion</strong> and
+            take care of your own mental health as you do.
+          </p>
+        </aside>
+
+        <!-- ===================== Video Section ===================== -->
+        <section class="video-section" aria-labelledby="video-heading">
+          <h2 id="video-heading">Featured Presentation</h2>
+          <div class="video-card">
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/iy7kcA3GC1Q"
+                title="MNHTF Guest Speaker Dakota County August 1, 2024"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <p class="video-caption">MNHTF Guest Speaker — Dakota County, August 1, 2024</p>
+          </div>
+        </section>
+
       </div>
     </div>
   </div>
@@ -72,21 +191,425 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-.video-section {
-  margin-top: var(--space-12);
+/* ==============================================
+   Hero
+   ============================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
+
+.hero-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(4, 12, 222, 0.38) 0%,
+    rgba(0, 0, 0, 0.60) 100%
+  );
+}
+
+.hero-title-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: var(--space-12);
+}
+
+.hero-title {
+  color: var(--color-white);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+  line-height: 1.2;
+}
+
+/* ==============================================
+   Page Background & Content Wrapper
+   ============================================== */
+.page-bg {
+  background-color: var(--color-bg-light);
+}
+
+.page-content {
+  padding: var(--space-12) 0;
+}
+
+/* ==============================================
+   Intro Text
+   ============================================== */
+.intro-text {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-dark);
+  font-weight: 600;
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto var(--space-8);
+  line-height: 1.5;
+}
+
+/* ==============================================
+   Stats Callout
+   ============================================== */
+.stats-callout {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  border-radius: 16px;
+  padding: var(--space-8) var(--space-12);
+  margin-bottom: var(--space-8);
+}
+
+.stat-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+.stat-number {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: var(--font-size-lg);
+  color: rgba(255, 255, 255, 0.90);
+  line-height: 1.5;
+}
+
+.stat-source {
+  font-size: var(--font-size-base);
+  color: rgba(255, 255, 255, 0.70);
+  font-weight: 400;
+}
+
+.stat-divider {
+  width: 2px;
+  min-height: 80px;
+  background-color: rgba(255, 255, 255, 0.28);
+  align-self: stretch;
+  flex-shrink: 0;
+  margin: var(--space-2) 0;
+}
+
+/* ==============================================
+   Content Cards (shared)
+   ============================================== */
+.content-card {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  margin-bottom: var(--space-8);
+  overflow: hidden;
+}
+
+.card-accent {
+  height: 5px;
+  background-color: var(--color-primary);
+  width: 100%;
+}
+
+.card-body {
+  padding: var(--space-12);
+}
+
+.card-body h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-6);
+  color: var(--color-primary);
+}
+
+.card-body h3 {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+}
+
+.card-body p {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+.card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.card-intro {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-6);
+}
+
+.card-note {
+  background-color: var(--color-bg-light);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 0 8px 8px 0;
+  padding: var(--space-4) var(--space-6);
+  margin-top: var(--space-6);
+  margin-bottom: 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+/* ==============================================
+   Bulleted Content List
+   ============================================== */
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.content-list li {
+  font-size: var(--font-size-lg);
+  line-height: 1.65;
+  color: var(--color-text);
+  padding-left: var(--space-8);
+  position: relative;
+}
+
+.content-list li::before {
+  content: '';
+  position: absolute;
+  left: var(--space-3);
+  top: 0.58em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* ==============================================
+   Similar Issues Blocks
+   ============================================== */
+.similar-issues-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+}
+
+.issue-block {
+  background-color: var(--color-bg-light);
+  border-left: 5px solid var(--color-primary);
+  border-radius: 0 12px 12px 0;
+  padding: var(--space-8);
+}
+
+.issue-block h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+}
+
+.issue-block p {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+/* ==============================================
+   Common Experiences Pill Grid
+   ============================================== */
+.pill-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-6) 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--color-bg-light);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  border-radius: 100px;
+  padding: var(--space-2) var(--space-6);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ==============================================
+   Compassion Closing Box
+   ============================================== */
+.compassion-box {
+  background-color: var(--color-accent);
+  border-radius: 16px;
+  padding: var(--space-12);
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.compassion-box p {
+  font-size: var(--font-size-lg);
+  line-height: 1.75;
+  color: var(--color-text-dark);
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+/* ==============================================
+   Video Section
+   ============================================== */
+.video-section {
+  margin-bottom: var(--space-8);
+}
+
+.video-section h2 {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.video-card {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: var(--space-8);
+  overflow: hidden;
+}
+
 .video-embed {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  max-width: 800px;
+  border-radius: 8px;
 }
+
 .video-embed iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
+}
+
+.video-caption {
+  text-align: center;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  margin: var(--space-4) 0 0;
+}
+
+/* ==============================================
+   Focus States (accessibility)
+   ============================================== */
+a:focus-visible,
+button:focus-visible,
+iframe:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* ==============================================
+   Responsive — Mobile
+   ============================================== */
+@media (max-width: 768px) {
+  .hero-image-wrap {
+    height: 280px;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-title-wrap {
+    padding-bottom: var(--space-8);
+  }
+
+  .intro-text {
+    font-size: var(--font-size-lg);
+  }
+
+  .stats-callout {
+    flex-direction: column;
+    padding: var(--space-8) var(--space-6);
+    gap: var(--space-4);
+  }
+
+  .stat-divider {
+    width: 100%;
+    height: 2px;
+    min-height: 0;
+    align-self: auto;
+    margin: 0;
+  }
+
+  .stat-number {
+    font-size: var(--font-size-2xl);
+  }
+
+  .stat-label {
+    font-size: var(--font-size-base);
+  }
+
+  .card-body {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .card-body h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .card-body h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .issue-block {
+    padding: var(--space-6);
+  }
+
+  .compassion-box {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .video-card {
+    padding: var(--space-4);
+  }
+
+  .video-section h2 {
+    font-size: var(--font-size-2xl);
+  }
 }
 </style>

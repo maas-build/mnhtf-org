@@ -1,33 +1,159 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface AudienceCard {
+  label: string;
+  href: string;
+}
+
+const audienceCards: AudienceCard[] = [
+  { label: "I am struggling with Hoarding Disorder…",          href: "/for-people-who-hoard/" },
+  { label: "I am a friend or family member of someone…",       href: "/for-friends-and-family/" },
+  { label: "I am a Municipality…",                             href: "/for-municipalities/" },
+  { label: "I am a Property Manager…",                         href: "/for-property-managers/" },
+  { label: "I am a Mental Health Professional…",               href: "/coming-soon/" },
+];
 ---
+
 <BaseLayout title="Directory" description="Resources for individuals, families, and professionals dealing with hoarding disorder in Minnesota.">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner container">
+      <h1 class="hero-title">Directory of Resources</h1>
+      <p class="hero-subtitle">Find resources tailored to your situation.</p>
+    </div>
+  </div>
 
   <div class="page-content">
     <div class="container">
 
-      <p class="disclaimer"><em><strong>Disclaimer:</strong> The Minnesota Hoarding Task Force ("MN HTF") does not provide services directly. MN HTF provides resources and information regarding the general subject of hoarding. In doing so, MN HTF does not endorse, recommend, warrant, or assume any legal liability for the accuracy, completeness, or usefulness of any information, apparatus, product, or process.</em></p>
+      <!-- ── Audience navigation ── -->
+      <section class="dir-section" aria-labelledby="audience-heading">
+        <h2 id="audience-heading" class="section-heading">Find Resources For You</h2>
+        <p class="section-intro">
+          Select the option that best describes your situation to find resources
+          tailored to your needs.
+        </p>
+        <ul class="audience-grid" role="list">
+          {audienceCards.map((card) => (
+            <li class="audience-card">
+              <a href={card.href} class="audience-card__link" aria-label={`View resources: ${card.label}`}>
+                <span class="audience-card__label">{card.label}</span>
+                <span class="audience-card__cta" aria-hidden="true">View Resources →</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
 
-      <div class="download-section">
-        <h2>Directory of Resources to Download:</h2>
-        <p><a href="https://mnhtf.org/wp-content/uploads/2025/11/11_15_25-MN-Hoarding-Taskforce-Comprehensive-Resource-List-.xlsx.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Click here</a></p>
-      </div>
+      <!-- ── Downloads ── -->
+      <section class="dir-section" aria-labelledby="downloads-heading">
+        <h2 id="downloads-heading" class="section-heading">Downloads</h2>
+        <p class="section-intro">
+          Access our curated PDF resources below — free to download and share.
+        </p>
 
-      <div class="download-section">
-        <h2>Donation Resource List to download:</h2>
-        <p><a href="https://bridging.org/wp-content/uploads/2025/06/BridgingDonorResourceListRevApril25-1.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Click here</a></p>
-      </div>
+        <div class="download-card">
+          <div class="download-card__body">
+            <h3 class="download-card__title">Directory of Resources</h3>
+            <p class="download-card__desc">
+              Our comprehensive, up-to-date list of hoarding-related services,
+              organizations, and supports available throughout Minnesota.
+            </p>
+          </div>
+          <a
+            href="https://mnhtf.org/wp-content/uploads/2025/11/11_15_25-MN-Hoarding-Taskforce-Comprehensive-Resource-List-.xlsx.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary download-card__btn"
+            aria-label="Download the Comprehensive Resource List PDF (opens in new tab)"
+          >
+            Download PDF
+          </a>
+        </div>
 
-      <div class="brochure-section">
-        <a href="/pdfs/MNHTF-Final-How-to-Help-Brochure.pdf" download>
-          <img src="/images/Screenshot-2024-07-21-directory.png" alt="MN HTF How to Help Brochure" class="brochure-img" />
+        <div class="download-card">
+          <div class="download-card__body">
+            <h3 class="download-card__title">Donation Resource List</h3>
+            <p class="download-card__desc">
+              A resource list from Bridging with information on where to donate
+              household items — helpful when clearing a home affected by hoarding.
+            </p>
+          </div>
+          <a
+            href="https://bridging.org/wp-content/uploads/2025/06/BridgingDonorResourceListRevApril25-1.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary download-card__btn"
+            aria-label="Download the Donation Resource List PDF (opens in new tab)"
+          >
+            Download PDF
+          </a>
+        </div>
+      </section>
+
+      <!-- ── Brochure ── -->
+      <section class="dir-section brochure-section" aria-labelledby="brochure-heading">
+        <h2 id="brochure-heading" class="section-heading">How to Help Brochure</h2>
+        <p class="section-intro">
+          Download and share our printable brochure for practical guidance on
+          supporting someone affected by hoarding disorder.
+        </p>
+        <figure class="brochure-figure">
+          <a
+            href="/pdfs/MNHTF-Final-How-to-Help-Brochure.pdf"
+            download
+            aria-label="Download the MN HTF How to Help Brochure as a PDF"
+          >
+            <img
+              src="/images/Screenshot-2024-07-21-directory.png"
+              alt="Preview of the MN HTF How to Help Brochure"
+              class="brochure-img"
+              width="600"
+              height="auto"
+            />
+          </a>
+          <figcaption>
+            <a
+              href="/pdfs/MNHTF-Final-How-to-Help-Brochure.pdf"
+              download
+              class="btn btn-primary brochure-download-btn"
+            >
+              Download Brochure (PDF)
+            </a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ── YouTube CTA ── -->
+      <section class="dir-section youtube-section" aria-labelledby="youtube-heading">
+        <h2 id="youtube-heading" class="youtube-section__heading">Check Out Our YouTube Channel!</h2>
+        <p class="youtube-section__desc">
+          Watch educational videos, webinars, and community conversations about
+          hoarding disorder on the MN HTF YouTube channel.
+        </p>
+        <a
+          href="https://www.youtube.com/@mnhoardingtaskforce1757"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+          aria-label="Visit the MN HTF YouTube channel (opens in new tab)"
+        >
+          MNHTF YouTube
         </a>
-      </div>
+      </section>
 
-      <div class="youtube-cta">
-        <p>Check Out Our YouTube Channel!</p>
-        <a href="https://www.youtube.com/@mnhoardingtaskforce1757" target="_blank" rel="noopener noreferrer" class="btn btn-primary">MNHTF YouTube</a>
-      </div>
+      <!-- ── Disclaimer ── -->
+      <aside class="disclaimer" aria-label="Disclaimer">
+        <p>
+          <strong>Disclaimer:</strong> The Minnesota Hoarding Task Force ("MN HTF") does not provide
+          services directly. MN HTF provides resources and information regarding the general subject
+          of hoarding. In doing so, MN HTF does not endorse, recommend, warrant, or assume any legal
+          liability for the accuracy, completeness, or usefulness of any information, apparatus,
+          product, or process.
+        </p>
+      </aside>
 
     </div>
   </div>
@@ -35,33 +161,248 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-.disclaimer {
-  margin-bottom: var(--space-8);
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url('/images/Directory-of-Resources.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-12) var(--space-6);
 }
-.download-section {
-  margin-bottom: var(--space-8);
-}
-.download-section h2 {
-  margin-bottom: var(--space-3);
-}
-.brochure-section {
-  margin: var(--space-8) 0;
+.hero-inner {
   text-align: center;
 }
-.brochure-img {
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-}
-.youtube-cta {
-  margin: var(--space-8) 0;
-  text-align: center;
-}
-.youtube-cta p {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
+.hero-title {
+  font-size: var(--font-size-3xl);
+  color: #ffffff;
   margin-bottom: var(--space-4);
+}
+.hero-subtitle {
+  font-size: var(--font-size-xl);
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+}
+
+
+/* ── Generic section wrapper ─────────────────────────────────── */
+.dir-section {
+  background-color: var(--color-bg);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: var(--space-12);
+  margin-bottom: var(--space-8);
+}
+
+.section-heading {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.section-intro {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+  max-width: 64ch;
+}
+
+/* ── Audience cards ──────────────────────────────────────────── */
+.audience-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.audience-card {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  transition: box-shadow var(--transition), border-color var(--transition);
+  overflow: hidden;
+}
+
+.audience-card:hover {
+  box-shadow: 0 4px 20px rgba(4, 12, 222, 0.12);
+  border-color: var(--color-primary);
+}
+
+.audience-card__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  text-decoration: none;
+  color: var(--color-text-dark);
+  background-color: var(--color-bg);
+  transition: background-color var(--transition);
+}
+
+.audience-card__link:hover {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+.audience-card__label {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+  flex: 1;
+}
+
+.audience-card__cta {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Download cards ──────────────────────────────────────────── */
+.download-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background-color: var(--color-bg-light);
+  margin-bottom: var(--space-6);
+}
+
+.download-card:last-child {
+  margin-bottom: 0;
+}
+
+.download-card__body {
+  flex: 1;
+}
+
+.download-card__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-2);
+}
+
+.download-card__desc {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.download-card__btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: var(--space-3) var(--space-6);
+}
+
+/* ── Brochure section ────────────────────────────────────────── */
+.brochure-section {
+  text-align: center;
+}
+
+.brochure-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.brochure-img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  transition: box-shadow var(--transition);
+}
+
+.brochure-img:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.brochure-download-btn {
+  font-size: var(--font-size-lg);
+  padding: var(--space-3) var(--space-8);
+}
+
+/* ── YouTube CTA section ─────────────────────────────────────── */
+.youtube-section {
+  text-align: center;
+  background-color: var(--color-bg-light);
+}
+
+.youtube-section__heading {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.youtube-section__desc {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+  max-width: 56ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Disclaimer ──────────────────────────────────────────────── */
+.disclaimer {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-8);
+  padding: var(--space-6);
+  border-radius: 8px;
+  background-color: var(--color-bg-light);
+  border-left: 4px solid var(--color-border);
+}
+
+.disclaimer p {
+  font-size: var(--font-size-sm);
+  color: var(--color-secondary);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .dir-section {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .section-heading,
+  .youtube-section__heading {
+    font-size: var(--font-size-2xl);
+  }
+
+  .download-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+
+  .download-card__btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .audience-card__link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .audience-card__cta {
+    font-size: var(--font-size-sm);
+  }
 }
 </style>

@@ -118,6 +118,16 @@ public/
 - **Adaptive layout** — all pages must be responsive across mobile, tablet, and desktop, matching the current site's breakpoints
 - **Text instead of text-images** — replace any content that is currently a screenshot/image of text with real HTML text, but style it to look identical to the image
 
+### Design Principles (applied during this migration)
+
+- **Prefer vertical layouts** — stack sections top-to-bottom as the default. Only use multi-column horizontal layouts when content naturally belongs side-by-side (e.g. a photo + text pair). Avoid wide sidebar-based layouts.
+- **Generous spacing** — sections should breathe. Use `--space-12` padding on white card sections, `--space-8` gap between sections. Never feel cramped or packed.
+- **Large, readable type** — body text at `--font-size-lg` (18px) minimum; FAQ and prominent links at `--font-size-xl` (22px); section headings (`h2`) at `--font-size-3xl` (36px); card subheadings (`h3`) at `--font-size-xl` (22px). Never use `--font-size-sm` (14px) for flowing content.
+- **Prominent headshots** — person / board member circular photos should be at least 140px. Don't shrink them to fit more per row; reduce columns instead.
+- **White cards with shadow** — content sections are white cards (`border-radius: 16px`, `box-shadow: 0 2px 16px rgba(0,0,0,0.07)`) on a light background. All four sides of a card must look the same — do **not** add a colored `border-top` strip or any single-side accent border. Color accents belong on icon badges or headings, not card borders.
+- **No iframes for external forms or feeds** — if the service sends `X-Frame-Options: DENY`, replace with a native HTML form or external link instead of embedding.
+- **Hero image on every page** — every page must open with a full-width hero section. Use a relevant background image (from `public/images/`) with a dark gradient overlay (`linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45))`) so the page title remains readable in white. Minimum hero height: `320px`. The `<h1>` lives inside the hero.
+
 ---
 
 ## Testing Guidelines

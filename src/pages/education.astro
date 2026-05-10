@@ -3,82 +3,290 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Education" description="Educational resources about hoarding disorder for individuals, families, and communities.">
 
-  <div class="page-content">
-    <div class="container">
-      <h1>Education</h1>
-      <h2>Building Understanding and Awareness</h2>
-
-      <p>At the Minnesota Hoarding Task Force, we believe that education is the foundation for fostering understanding, compassion, and action. Our educational resources are designed to inform individuals, families, and communities about hoarding disorder, its challenges, and the steps needed to address it.</p>
-
-      <p>Through workshops, community presentations, and a library of resources, we empower people to recognize the signs of hoarding, understand its impact, and connect with the support systems available. Whether you're seeking guidance for a loved one, training as a professional, or learning to better support your community, our mission is to provide accessible, practical knowledge that drives meaningful change.</p>
-
-      <div class="videos-grid">
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/I13Q37paLzA"
-            title="MNHTF 2024 - Supporting Loved Ones with Anxiety - Guest Speaker Jayme Kolbo, LPCC"
-            width="560"
-            height="315"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/Z1LZY1l6dNY"
-            title="MNHTF hosts Bridging.org"
-            width="560"
-            height="315"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/iy7kcA3GC1Q"
-            title="MNHTF Guest Speaker Dakota County August 1, 2024"
-            width="560"
-            height="315"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-
-      <div class="youtube-cta">
-        <a href="https://www.youtube.com/@mnhoardingtaskforce1757" target="_blank" rel="noopener noreferrer" class="btn btn-primary">MNHTF YouTube Channel</a>
-      </div>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner container">
+      <h1 class="hero-title">Education</h1>
+      <p class="hero-subtitle">Building Understanding and Awareness</p>
     </div>
+  </div>
+
+  <div class="edu-page">
+
+    <!-- ── Intro card ── -->
+    <section class="edu-intro-section">
+      <div class="container">
+        <div class="intro-card">
+          <p class="intro-body">
+            At the Minnesota Hoarding Task Force, we believe that education is the foundation for
+            fostering understanding, compassion, and action. Our educational resources are designed
+            to inform individuals, families, and communities about hoarding disorder, its challenges,
+            and the steps needed to address it.
+          </p>
+          <p class="intro-body">
+            Through workshops, community presentations, and a library of resources, we empower
+            people to recognize the signs of hoarding, understand its impact, and connect with the
+            support systems available. Whether you're seeking guidance for a loved one, training as
+            a professional, or learning to better support your community, our mission is to provide
+            accessible, practical knowledge that drives meaningful change.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Featured Presentations video grid ── -->
+    <section class="edu-videos-section">
+      <div class="container">
+        <h2 class="section-heading">Watch &amp; Learn</h2>
+        <p class="section-subheading">Featured presentations from MNHTF events and guest speakers.</p>
+
+        <div class="videos-grid">
+
+          <div class="video-card">
+            <p class="video-title">MNHTF 2024 — Supporting Loved Ones with Anxiety<br/>Guest Speaker Jayme Kolbo, LPCC</p>
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/I13Q37paLzA"
+                title="MNHTF 2024 - Supporting Loved Ones with Anxiety - Guest Speaker Jayme Kolbo, LPCC"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <p class="video-title">MNHTF hosts Bridging.org</p>
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/Z1LZY1l6dNY"
+                title="MNHTF hosts Bridging.org"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <p class="video-title">MNHTF Guest Speaker — Dakota County<br/>August 1, 2024</p>
+            <div class="video-embed">
+              <iframe
+                src="https://www.youtube.com/embed/iy7kcA3GC1Q"
+                title="MNHTF Guest Speaker Dakota County August 1, 2024"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── YouTube channel CTA ── -->
+    <section class="edu-cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="cta-heading">More on Our YouTube Channel</h2>
+          <p class="cta-body">
+            Browse our full library of educational presentations, community events, and guest speaker
+            sessions on the MNHTF YouTube channel.
+          </p>
+          <a
+            href="https://www.youtube.com/@mnhoardingtaskforce1757"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            MNHTF YouTube Channel
+          </a>
+        </div>
+      </div>
+    </section>
+
   </div>
 
 </BaseLayout>
 
 <style>
+/* ── Hero ── */
+.hero {
+  background-image: linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)), url('/images/Mn-Hoarding-Task-Force-People.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-12) var(--space-6);
+}
+
+.hero-inner {
+  text-align: center;
+}
+
+.hero-title {
+  font-size: var(--font-size-3xl);
+  color: #ffffff;
+  font-weight: 700;
+  margin: 0 0 var(--space-4) 0;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-xl);
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Page wrapper ── */
+.edu-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding-block: var(--space-12);
+}
+
+/* ── Intro card ── */
+.intro-card {
+  background: var(--color-bg);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  padding: var(--space-12);
+}
+
+.intro-body {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  line-height: 1.75;
+  margin: 0 0 var(--space-4);
+}
+
+.intro-body:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Videos section ── */
+.section-heading {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  margin: 0 0 var(--space-2);
+  line-height: 1.2;
+}
+
+.section-subheading {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin: 0 0 var(--space-8);
+}
+
+/* 2-column grid on desktop, 1-column on mobile */
 .videos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-6);
-  margin: var(--space-8) 0;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
 }
+
+.video-card {
+  background: var(--color-bg);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  padding: var(--space-4) var(--space-6);
+  margin: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Responsive 16:9 embed */
 .video-embed {
   position: relative;
+  width: 100%;
   padding-bottom: 56.25%;
   height: 0;
-  overflow: hidden;
-  border-radius: 8px;
+  flex-shrink: 0;
 }
+
 .video-embed iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  border: 0;
 }
-.youtube-cta {
-  margin-top: var(--space-8);
+
+/* ── YouTube CTA section ── */
+.cta-box {
+  background: var(--color-bg-light);
+  border-radius: 16px;
+  padding: var(--space-12);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.cta-heading {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.cta-body {
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  line-height: 1.7;
+  max-width: 56ch;
+  margin: 0;
+}
+
+/* ── Responsive breakpoints ── */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .edu-page {
+    gap: var(--space-8);
+    padding-block: var(--space-8);
+  }
+
+  .intro-card {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .section-heading {
+    font-size: var(--font-size-2xl);
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .cta-box {
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .cta-heading {
+    font-size: var(--font-size-xl);
+  }
 }
 </style>
