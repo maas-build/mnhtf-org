@@ -19,8 +19,21 @@ const audienceCards: AudienceCard[] = [
 
   <!-- Hero banner — image carries the title text -->
   <div class="hero">
-    <img src="/images/Directory-of-Resources.png" alt="Directory of Resources" class="hero-img" />
+    <img src="https://mnhtf.org/wp-content/uploads/2024/10/Directory-of-Resources.png" alt="Directory of Resources" class="hero-img" />
     <h1 class="sr-only">Directory of Resources</h1>
+  </div>
+
+  <!-- Disclaimer immediately below hero -->
+  <div class="disclaimer-hero-wrap">
+    <aside class="disclaimer disclaimer--hero" aria-label="Disclaimer">
+      <p>
+        <strong>Disclaimer:</strong> The Minnesota Hoarding Task Force ("MN HTF") does not provide
+        services directly. MN HTF provides resources and information regarding the general subject
+        of hoarding. In doing so, MN HTF does not endorse, recommend, warrant, or assume any legal
+        liability for the accuracy, completeness, or usefulness of any information, apparatus,
+        product, or process.
+      </p>
+    </aside>
   </div>
 
   <div class="page-content">
@@ -347,22 +360,32 @@ const audienceCards: AudienceCard[] = [
   margin-right: auto;
 }
 
-/* ── Disclaimer ──────────────────────────────────────────────── */
+/* ── Disclaimer (hero strip) ─────────────────────────────────── */
+.disclaimer-hero-wrap {
+  max-width: 1200px;
+  margin: var(--space-6) auto;
+  padding: 0 var(--space-6);
+}
+
+/* ── Disclaimer (shared) ─────────────────────────────────────── */
 .disclaimer {
-  margin-top: var(--space-4);
-  margin-bottom: var(--space-8);
   padding: var(--space-6);
   border-radius: 8px;
   background-color: var(--color-bg-light);
-  border-left: 4px solid var(--color-border);
+  border: 1px solid var(--color-border);
 }
 
 .disclaimer p {
-  font-size: var(--font-size-sm);
-  color: var(--color-secondary);
-  font-style: italic;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
   margin: 0;
   line-height: 1.7;
+}
+
+/* bottom disclaimer */
+aside.disclaimer:not(.disclaimer--hero) {
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-8);
 }
 
 /* ── Responsive ──────────────────────────────────────────────── */
