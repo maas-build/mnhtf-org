@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "wrangler dev",
     "check": "astro check",
-    "lint": "rtk lint biome",
+    "lint": "biome lint ./src ./workers",
     "format": "biome format --write ./src ./workers",
     "test": "vitest run",
     "test:watch": "vitest",
