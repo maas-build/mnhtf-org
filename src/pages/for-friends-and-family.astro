@@ -3,12 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="For Friends and Family" description="If you have a friend or family member with Hoarding Disorder, learn how to help and find support for yourself.">
 
-  <!-- Hero -->
+  <!-- Hero banner — image carries the title text -->
   <div class="hero">
-    <div class="hero-inner container">
-      <h1 class="hero-title">I Am a Friend or Family Member</h1>
-      <p class="hero-subtitle">Learn how to help and find support for yourself.</p>
-    </div>
+    <img src="/images/Friend-or-Family.png" alt="I Am a Friend or Family Member" class="hero-img" />
+    <h1 class="sr-only">I Am a Friend or Family Member</h1>
   </div>
 
   <div class="page-content">
@@ -213,28 +211,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-/* ── Hero ─────────────────────────────────────────────────────────── */
+/* ── Hero banner ─────────────────────────────────────── */
 .hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #020890 100%);
-  background-size: cover;
-  background-position: center;
-  min-height: 320px;
-  display: flex;
-  align-items: center;
-  padding: var(--space-12) var(--space-6);
+  width: 100%;
+  line-height: 0;
 }
-.hero-inner {
-  text-align: center;
-}
-.hero-title {
-  font-size: var(--font-size-3xl);
-  color: #ffffff;
-  margin-bottom: var(--space-4);
-}
-.hero-subtitle {
-  font-size: var(--font-size-xl);
-  color: rgba(255,255,255,0.9);
-  margin: 0;
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 /* ── Utility ───────────────────────────────────────────────────────── */
 .sr-only {

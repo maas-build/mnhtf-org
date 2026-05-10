@@ -3,12 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="For Municipalities" description="Resources for local government and code enforcement dealing with hoarding situations.">
 
-  <!-- Hero -->
+  <!-- Hero banner — image carries the title text -->
   <div class="hero">
-    <div class="hero-inner container">
-      <h1 class="hero-title">I Am a Municipality</h1>
-      <p class="hero-subtitle">Resources for local government and code enforcement responding to hoarding.</p>
-    </div>
+    <img src="/images/Municipality.png" alt="I Am a Municipality" class="hero-img" />
+    <h1 class="sr-only">I Am a Municipality</h1>
   </div>
 
   <div class="page-content">
@@ -246,28 +244,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </BaseLayout>
 
 <style>
-/* ── Hero ───────────────────────────────────────────────── */
+/* ── Hero banner ─────────────────────────────────────── */
 .hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, #020890 100%);
-  background-size: cover;
-  background-position: center;
-  min-height: 320px;
-  display: flex;
-  align-items: center;
-  padding: var(--space-12) var(--space-6);
+  width: 100%;
+  line-height: 0;
 }
-.hero-inner {
-  text-align: center;
-}
-.hero-title {
-  font-size: var(--font-size-3xl);
-  color: #ffffff;
-  margin-bottom: var(--space-4);
-}
-.hero-subtitle {
-  font-size: var(--font-size-xl);
-  color: rgba(255,255,255,0.9);
-  margin: 0;
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 /* ── Screen-reader-only utility ─────────────────────────── */
 .sr-only {
