@@ -1,5 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import VideoListSection from '../components/VideoListSection.astro';
+
+const friendsAndFamilyVideos = [
+  {
+    title: 'Friends and Family hoarding support video 1',
+    youtubeId: '6hoBJNrlDx0',
+  },
+  {
+    title: 'Friends and Family hoarding support video 2',
+    youtubeId: 'iEWDfn9C-tY',
+  },
+  {
+    title: 'Friends and Family hoarding support video 3',
+    youtubeId: 'uFxlSlsvncc',
+  },
+];
 ---
 <BaseLayout title="For Friends and Family" description="If you have a friend or family member with Hoarding Disorder, learn how to help and find support for yourself.">
 
@@ -206,6 +222,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </article>
         </div>
       </section>
+
+      <VideoListSection videos={friendsAndFamilyVideos} />
 
     </div>
   </div>
