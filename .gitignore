@@ -29,3 +29,7 @@ screenshots/
 
 # wrangler
 .wrangler/
+
+# Dev artifacts
+*.log
+compare.js
